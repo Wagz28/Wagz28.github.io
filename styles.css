@@ -8,4 +8,5 @@ h1 {
     align-items: center;
     background: linear-gradient(45deg, blue, yellow); 
     border: 2px ridge grey;
+    margin: 0;
 }
