@@ -1,4 +1,4 @@
-body { padding: none; margin: none; }
+body { padding: 0; margin: 0; }
 
 h1 {
     display: flex;
