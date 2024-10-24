@@ -1,3 +1,5 @@
+body { padding: none; margin: none; }
+
 h1 {
     display: flex;
     width: 100vw;
