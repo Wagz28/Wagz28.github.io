@@ -1,12 +1,31 @@
-body { padding: 0; margin: 0; }
+body { padding: 0; margin: 0; font-family: monospace, system-ui; }
 
 h1 {
     display: flex;
     width: calc(100vw - 4px);
-    height: 10vh;
+    height: 10vh; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, blue, yellow); 
     border: 2px ridge grey;
     margin: 0;
+}
+
+#l-l {
+    font-weight: normal;
+}
+
+#l-l::after {
+    content: "";
+    animation: dots 5s linear;
+}
+
+@keyframes dots {
+    0% { content: "";}
+    25% { content: ".";}
+    50% { content: "..";}
+    75% { content: "...";}
+    100% { content: "";}
 }
