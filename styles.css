@@ -29,3 +29,14 @@ h1 {
     75% { content: "...";}
     100% { content: "";}
 }
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#Album-Cover {
+    position: relative;
+    top: -15vh; left: -10vw;
+    z-index: -1;
+}
