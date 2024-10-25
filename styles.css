@@ -33,6 +33,7 @@ h1 {
 main {
     display: grid;
     grid-template-columns: 50% 50%;
+    padding: 5vw;
 }
 
 #Album-Cover {
