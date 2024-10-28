@@ -41,3 +41,8 @@ main {
     top: -15vh; left: -10vw;
     z-index: -1;
 }
+
+table > tr > td {
+    border: 2px solid black;
+    background: rgb(154, 136, 224);
+}
