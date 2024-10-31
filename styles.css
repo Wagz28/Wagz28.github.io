@@ -13,6 +13,11 @@ h1 {
     margin: 0;
 }
 
+h3 {
+    width: 50vw; height: 5vh; display: flex; justify-content: center; align-items: center;
+    background: radial-gradient(rgb(0 0 249 / 30%) 25%, rgb(138 43 226 / 10%) 60%, transparent 70%);
+}
+
 #l-l {
     font-weight: normal;
 }
