@@ -4,43 +4,220 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ben Wagstaff</title>
-  <style>
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      min-height:100vh;
-      display:grid;
-      place-items:center;
-      background:#fff;
-      color:#111;
-    }
-    .wrap{
-      width:min(820px, 92vw);
-      padding:48px 20px;
-    }
-    h1{ font-size: 44px; margin:0 0 8px; font-weight: 650; letter-spacing:-0.02em; }
-    p{ margin:0 0 22px; font-size: 18px; color:#333; line-height:1.5; }
-    a{
-      color:#2d3a8c;
-      text-decoration:none;
-      font-weight:600;
-      margin-right:18px;
-    }
-    a:hover{ text-decoration:underline; }
-    .meta{ font-size:14px; color:#666; margin-top:14px; }
-  </style>
+  <meta name="description" content="Ben Wagstaff - Mathematics & Computer Science student at Durham University. Optimisation, systems architecture, applied AI." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <main class="wrap">
-    <h1>Ben Wagstaff</h1>
-    <p>Mathematics & Computer Science at Durham University. Portfolio landing page.</p>
-    <div>
-      <a href="#" aria-disabled="true">CV (PDF) — soon</a>
-      <a href="#" aria-disabled="true">AI Report — soon</a>
-      <a href="#" aria-disabled="true">Simplify — soon</a>
-      <a href="mailto:YOUR_EMAIL">Email</a>
-    </div>
-    <div class="meta">Last updated: 2026-02-20</div>
+
+  <!-- Orb Navigation -->
+  <nav class="orb-nav" aria-label="Section navigation">
+    <a class="orb" href="#about" data-section="about"><span>About</span></a>
+    <a class="orb" href="#education" data-section="education"><span>Education</span></a>
+    <a class="orb" href="#experience" data-section="experience"><span>Experience</span></a>
+    <a class="orb" href="#projects" data-section="projects"><span>Projects</span></a>
+    <a class="orb" href="#downloads" data-section="downloads"><span>Downloads</span></a>
+    <a class="orb" href="#contact" data-section="contact"><span>Contact</span></a>
+    <div class="orb-halo" aria-hidden="true"></div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Ben Wagstaff</h1>
+      <p class="tagline">
+        ~ <span style="background:red">Not reliable / Not checked through ~ just quickly written!!!</span> ~<br>
+        Mathematics & Computer Science - Durham University<br>
+        Optimisation Algorithms · Systems Architecture · Applied AI
+      </p>
+      <div class="header-links">
+        <a href="/downloads/ben-wagstaff-cv-2026.pdf">CV (PDF)</a>
+        <a href="/downloads/zero-shot-eeg-decoding-report.pdf">AI Report</a>
+        <a href="https://github.com/Wagz28" target="_blank">GitHub</a>
+        <a href="mailto:benwagstaff343@gmail.com">Email</a>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        Undergraduate in Mathematics and Computer Science with a focus on
+        optimisation, structured evaluation, and system design. Interested in
+        the interface between theoretical methods and robust implementation.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <strong>Durham University</strong>
+          <span>2024 - 2027</span>
+        </div>
+        <div class="entry-sub">
+          BSc Joint Honours - Mathematics & Computer Science
+        </div>
+        <ul>
+          <li>Top 10 in AI Report assessment among cohort.</li>
+          <li>Top 10 in SAT Race (Python DPLL satisfiability implementation)</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <strong>Monkton Senior School</strong>
+          <span>2018 - 2023</span>
+        </div>
+        <div class="entry-sub">
+          A-Levels in Further Maths, Maths, Physics, Psychology & Music Technology
+        </div>
+        <ul>
+          <li>...</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <strong>LCP (London & Cambridge Properties)</strong>
+          <span>Oct 2023 - Nov 2023</span>
+        </div>
+        <div class="entry-sub">
+          Data & Automation Work (SQL · Databricks · VBA)
+        </div>
+        <ul>
+          <li>Consolidated diverse data sources and supported AI-related pipeline tasks.</li>
+          <li>Developed VBA template automating credit control reporting workflows.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <strong>LyricalLearning</strong>
+          <span>Mar 2025 - Apr 2025</span>
+        </div>
+        <div class="entry-sub">
+          C#/.NET · Azure · SQL · Deployment
+        </div>
+        <ul>
+          <li>Designed and deployed web application with Azure SQL backend.</li>
+          <li>Implemented CI/CD pipelines, logging, and structured database transformations.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <!-- AI Report -->
+      <div class="project">
+        <div class="project-text">
+          <h3>Zero-Shot EEG → Image → Text Decoding</h3>
+          <p>
+            Linear evaluation of released BraVL features under strict zero-shot
+            conditions. Identified EEG→Image alignment as the dominant bottleneck
+            and achieved ~23% top-1 end-to-end across 1,854 classes.
+          </p>
+          <p class="project-links">
+            <a href="/downloads/zero-shot-eeg-decoding-report.pdf">Read Report (PDF)</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Simplify App -->
+      <div class="project">
+        <div class="project-text">
+          <h3>Simplify - Personal Systems Hub</h3>
+          <p>
+            Modular dashboard integrating structured task management,
+            knowledge tracking, and personal data tools. Designed around
+            clarity, extensibility, and long-term architectural coherence.
+          </p>
+          <ul>
+            <li>Structured data layer with modular feature separation.</li>
+            <li>Cross-device oriented design philosophy.</li>
+            <li>Built as an extensible personal infrastructure system.</li>
+          </ul>
+          <p class="project-links">
+            <a href="/simplify.html">View Project</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- CCU Website Project -->
+      <div class="project">
+        <div class="project-text">
+          <h3>Collingwood College (CCU) Website - First Year Coursework</h3>
+          <p>
+            Designed and developed a structured college website prototype as part of
+            first-year coursework. Focused on clean navigation, authentication logic
+            foundations, and scalable layout architecture.
+          </p>
+          <ul>
+            <li>Node.js-based structural implementation.</li>
+            <li>Clear separation of layout and content components.</li>
+            <li>Emphasis on usability and extensibility.</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://youtu.be/Ufk1Sdhdjeh" target="_blank">
+              View Demo on YouTube
+            </a>
+          </p>
+        </div>
+
+        <div class="project-media">
+          <div class="video">
+            <iframe 
+              src="https://youtu.be/Ufk1Sdhdjeh"
+              title="CCU Website Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Downloads -->
+    <section id="downloads" class="section">
+      <h2>Downloads</h2>
+      <ul class="download-list">
+        <li><a href="/downloads/ben-wagstaff-cv-2026.pdf">Ben Wagstaff - CV (PDF) - 2025 (old)</a></li>
+        <li><a href="/downloads/zero-shot-eeg-decoding-report.pdf">AI Report (PDF)</a></li>
+        <li><a href="/downloads/simplify-android-v1.0.apk">Simplify Android APK</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:benwagstaff343@gmail.com">benwagstaff343@gmail.com</a><br>
+        <a href="https://github.com/Wagz28" target="_blank">github.com/Wagz28</a><br>
+        <a href="https://www.linkedin.com/in/ben-wagstaff-06b04328a/" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Ben Wagstaff</p>
+    </footer>
+
   </main>
+
+  <div class="cursor-orb"></div>
+  <script src="main.js"></script>
 </body>
 </html>
