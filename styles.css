@@ -35,6 +35,18 @@ h2{
   color: var(--muted);
 }
 
+.video, .project-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    iframe {
+        height: 50vh;
+        width: 50vw;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
 /* --- Orb nav --- */
 .orb-nav{
   position: fixed;
