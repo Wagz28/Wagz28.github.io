@@ -107,8 +107,6 @@ h2{
   left: 0;
   top: 0;
   pointer-events: none;
-
-  /* “delayed” movement feel */
   transition: transform 700ms cubic-bezier(.2,.9,.2,1);
 }
 
@@ -137,3 +135,99 @@ h2{
 @media (max-width: 820px){
   .cursor-orb{ display: none; }
 }
+
+/* ------------------------------------- */
+
+.narrow {
+  max-width: 780px;
+}
+
+.back-link {
+  margin-top: 40px;
+}
+
+.project-header h1 {
+  margin-bottom: 6px;
+}
+
+.project-tagline {
+  color: #444;
+  font-size: 16px;
+}
+
+.screenshot-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.download-box {
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.4);
+}
+
+.download-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.25);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.download-btn:hover {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.4);
+}
+
+.checksum-inline {
+  font-size: 12px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checksum-inline code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: rgba(0,0,0,0.05);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  word-break: break-all;
+}
+
+.checksum-label {
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
+}
+

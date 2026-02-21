@@ -84,3 +84,16 @@ document.querySelectorAll("a, button").forEach(el => {
 });
 
 //  ----------------------------------------
+// Download Double Check
+
+const donwloadbtn = document.getElementById("download-btn");
+const warning = document.getElementById("download-warning");
+
+if (donwloadbtn && warning) {
+  donwloadbtn.addEventListener("click", () => {
+    warning.classList.toggle("hidden");
+  });
+}
+
+
+// ------------------------------------------
