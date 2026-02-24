@@ -420,6 +420,16 @@ button {
 
 /* Fancy Links for Header ---------------------------------------------- */
 
+/* default: touch */
+#links-simple { display: block; }
+#links-fancy  { display: none; }
+
+/* only show fancy when hover + fine pointer exists */
+@media (hover: hover) and (pointer: fine) {
+  #links-simple { display: none; }
+  #links-fancy  { display: block; }
+}
+
 .fancy-links * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;

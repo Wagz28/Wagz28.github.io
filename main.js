@@ -97,21 +97,3 @@ if (donwloadbtn && warning) {
 
 
 // ------------------------------------------
-// Fancy header with hover or not
-
-const hoverQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
-
-function updateLinks(e) {
-  if (e.matches) {
-    // Desktop-like
-    simple.classList.add("hidden");
-    fancy.classList.remove("hidden");
-  } else {
-    // Touch device
-    simple.classList.remove("hidden");
-    fancy.classList.add("hidden");
-  }
-}
-
-updateLinks(hoverQuery);
-hoverQuery.addEventListener("change", updateLinks);
