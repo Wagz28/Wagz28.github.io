@@ -6,6 +6,12 @@ html { scroll-behavior: smooth; }
   --muted: #3b3b3b;
   --rule: rgba(0,0,0,.10);
   --accent: #2d3a8c;
+
+  --card: rgba(255,255,255,.72);
+  --shadow: 0 12px 28px rgba(0,0,0,.10);
+  --shadow-soft: 0 10px 24px rgba(0,0,0,.06);
+  --ring: rgba(45,58,140,.18);
+  --accent-wash: rgba(45,58,140,.10);
 }
 
 body{
@@ -409,4 +415,124 @@ button {
     .left { transform: translateX(-50px) rotateY(-90deg); }
     .top { transform: translateY(-50px) rotateX(90deg); }
     .bottom { transform: translateY(50px) rotateX(-90deg); }
+}
+
+
+/* Fancy Links for Header ---------------------------------------------- */
+
+.fancy-links * {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.fancy-links ul {
+  display: flex;
+  position: relative;
+  gap: 18px;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.fancy-links ul li {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background: var(--paper);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  overflow: hidden; /* keeps gradients neatly clipped */
+}
+
+.fancy-links ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fancy-links ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+}
+
+.fancy-links ul li:hover {
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+.fancy-links ul li:hover::before {
+  opacity: 1;
+}
+
+.fancy-links ul li:hover::after {
+  opacity: 0.5;
+}
+
+/* Make the anchor fill the whole pill so the whole thing is clickable */
+.fancy-links ul li > a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Icon */
+.fancy-links ul li ion-icon {
+  color: #777;
+  font-size: 1.75em;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+  padding-top: 7.5px;
+}
+
+.fancy-links ul li:hover ion-icon {
+  transform: scale(0);
+  color: var(--card);
+  transition-delay: 0s;
+}
+
+.fancy-links ul li span {
+  position: absolute;
+}
+
+.fancy-links ul li .title {
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+  white-space: nowrap;
+}
+
+.fancy-links ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
+/* Keyboard focus (important) */
+.fancy-links a:focus-visible {
+  outline: 3px solid rgba(0,0,0,0.35);
+  outline-offset: 4px;
+  border-radius: 60px;
 }

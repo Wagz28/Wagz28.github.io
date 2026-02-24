@@ -6,6 +6,9 @@
   <title>Ben Wagstaff</title>
   <meta name="description" content="Ben Wagstaff - Mathematics & Computer Science student at Durham University. Optimisation, systems architecture, applied AI." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,11 +33,42 @@
         Mathematics & Computer Science - Durham University<br>
         Optimisation Algorithms · Systems Architecture · Applied AI
       </p>
-      <div class="header-links">
+      <div class="header-links hidden" id="links-simple">
         <a href="/downloads/ben-wagstaff-cv-2026.pdf">CV (PDF)</a>
         <a href="/downloads/zero-shot-eeg-decoding-report.pdf">AI Report</a>
         <a href="https://github.com/Wagz28" target="_blank">GitHub</a>
         <a href="mailto:benwagstaff343@gmail.com">Email</a>
+      </div>
+      <div class="header-links fancy-links" id="links-fancy">
+        <ul>
+          <li style="--i:rgba(169, 85, 255, .1);--j:rgba(234, 81, 255, .1)">
+            <a href="/downloads/ben-wagstaff-cv-2026.pdf" aria-label="Download CV (PDF)">
+              <span class="icon"><ion-icon name="document-text-outline"></ion-icon></span>
+              <span class="title">CV (PDF)</span>
+            </a>
+          </li>
+
+          <li style="--i:rgba(86, 204, 242, .1);--j:rgb(47, 128, 237, .1)">
+            <a href="/downloads/zero-shot-eeg-decoding-report.pdf" aria-label="Download AI Report (PDF)">
+              <span class="icon"><ion-icon name="sparkles-outline"></ion-icon></span>
+              <span class="title">AI Report</span>
+            </a>
+          </li>
+
+          <li style="--i:rgba(255, 153, 102, .1);--j:rgb(255, 94, 98, .1)">
+            <a href="https://github.com/Wagz28" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
+              <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
+              <span class="title">GitHub</span>
+            </a>
+          </li>
+
+          <li style="--i:rgba(128, 255, 114, .1);--j:rgb(126, 232, 250, .1)">
+            <a href="mailto:benwagstaff343@gmail.com" aria-label="Email Ben">
+              <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+              <span class="title">Email</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -230,5 +264,7 @@
 
   <div class="cursor-orb"></div>
   <script src="main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
