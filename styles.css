@@ -568,6 +568,9 @@ button {
   line-height: 1.9;
   font-size: 1.05rem;
   max-width: 700px;
+}
+
+.poem-body p {
   margin: 0.4em 0;
 }
 
