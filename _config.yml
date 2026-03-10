@@ -1,0 +1,13 @@
+title: "Ben Wagstaff"
+
+collections:
+  poems:
+    output: true
+    permalink: /poetry/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: poems
+    values:
+      layout: poem

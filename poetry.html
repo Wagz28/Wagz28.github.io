@@ -1,0 +1,41 @@
+---
+layout: default
+title: Poetry
+permalink: /poetry.html
+---
+
+<section id="poetry" class="section">
+  <h2>Poetry</h2>
+  <p>A selection of original poems.</p>
+
+  <div class="poem-list">
+    {% assign sorted_poems = site.poems | sort: "date" | reverse %}
+    {% for poem in sorted_poems %}
+      <article class="project poem-card">
+        <div class="project-text">
+          <h3><a href="{{ poem.url }}">{{ poem.title }}</a></h3>
+
+          {% if poem.date %}
+            <p class="poem-meta">{{ poem.date | date: "%-d %B %Y" }}</p>
+          {% endif %}
+
+          {% if poem.summary %}
+            <p>{{ poem.summary }}</p>
+          {% endif %}
+
+          {% if poem.tags %}
+            <p class="poem-tags">
+              {% for tag in poem.tags %}
+                <span class="poem-tag">{{ tag }}</span>
+              {% endfor %}
+            </p>
+          {% endif %}
+
+          <p class="project-links">
+            <a href="{{ poem.url }}">Read poem</a>
+          </p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
