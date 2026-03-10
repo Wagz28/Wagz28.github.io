@@ -12,7 +12,7 @@ title: Poetry
     {% for poem in sorted_poems %}
       <article class="project poem-card">
         <div class="project-text">
-          <h3><a href="{{ poem.url }}">{{ poem.title }}</a></h3>
+          <h3>{{ poem.title }}</h3>
 
           {% if poem.date %}
             <p class="poem-meta">{{ poem.date | date: "%-d %B %Y" }}</p>
@@ -31,7 +31,7 @@ title: Poetry
           {% endif %}
 
           <p class="project-links">
-            <a href="{{ poem.url }}">{{ poem.url }}</a>
+            <a href="{{ poem.url }}">Read {{ poem.title }}</a>
           </p>
         </div>
       </article>
