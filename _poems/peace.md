@@ -1,7 +1,7 @@
 ---
-title: "Balance"
+title: "Peace"
 date: 2025-12-25
-summary: "Spinning, spinning, don't stop, don't lose..."
+summary: "God made man ..."
 tags: [reflection, wonder, awe, reverence, christian]
 ---
 
