@@ -67,13 +67,13 @@ The chaos and strife, fighting for deathly life
 The cruel smile in horror's crown
 A nation captured by sensation
 Circular thoughts always fighting for conclusion
-Laughter and scorn hid a bonding thorn
+Laughter and scorn hiding a bonding thorn
 Waiting to cut yet looking for more
 Let's laugh and enjoy such wonderful song
 A crude note here makes a jollier throng
 What cause, what cause, have thy to cry
 Be merry and sing, let the poison sink in
-A madness, a dismissal for anything so terribly abysmal.
+A madness, and dismissal for anything so terribly abysmal.
 
 They cry in my mind
 "Why ruin the mood, is it not you who are crude?
@@ -86,15 +86,17 @@ I love the peace of an evening breeze
 The sweet talk of friends at ease
 The buildings bronzed till golden
 In the warmth of a winter's morning
-Okay I mean the contrast the uniqueness
+Okay I mean the contrast, the uniqueness
 The strength and joy despite bleakness
 We live, yes we die, but we live knowing it nigh
 We smile, laugh and dance in our well trodden path
-No it is not you I hate,
+No, I fear it is not you I hate,
 Not you on which I am tempted to dismay
 
-It is sin, and sadness in the knowledge of our badness
-We are broken and break, we move to the beat of satan's plays
+It is sin, 
+and sadness in the knowledge of our badness
+We are broken and break, 
+we move to the beat of satan's plays
 There is pain and sadness
 in our very own madness
 That we choose what is not good
@@ -135,15 +137,17 @@ but think _how much_ is left???
 How much is _given_, a promise made afresh
 In the coldness of night we can still see starlight
 The moon a reminder of oneday our tomb
-The box we shall leap from, the morning to be truly glad
+The box we shall leap from, 
+the morning to be truly glad!
 As we look to Jesus, as we embrace our true Dad.
 A Father and friend, forever and yet again
-A new heavens, a new heart, all the good but from the start
+A new heavens, a new heart, 
+all the _good_ but from the start
 So we smile in our lack, in our gift we have to share
 So even when others do not care
 We know of One who does,
 Who loves us despite,
-Who in our bitterest spite
+Who even in our bitterest spite
 Died to wash us bright.
 
 So I smile and laugh

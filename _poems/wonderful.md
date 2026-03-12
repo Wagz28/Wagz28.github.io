@@ -39,10 +39,13 @@ Why thou conspire, why thou deceive
 Submit to Him I earnestly plead
 
 So "Love and goodness won't You do it again, speak Revival as we praise Your Name"
-But I should correct such words for God is Love not Love is God
+But I should correct such words,
+For God is Love not Love is God
 A caution ignored as we place our treasures in what we should not
 
 But leave such chaos, words cannot tell
 For looking to our own is what has led us to Hell
 So may I leave it be as such a simple piece
 That to look to God is to find what I can only describe as _wonderful_ unimaginable peace.
+
+[1 John 4:7-21](https://www.bible.com/bible/59/1JN.4.7-21)
