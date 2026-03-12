@@ -35,6 +35,7 @@ Brilliance and glory,
 the world's very own lovingly made story.
 
 So ends the days, but in the merriest of ways
-Only after that frosted night of cold-delights, sinking those who did not see the dusk would be shunned, a great sadness,
-And yet our True King has _finally_ come.
+Only after that frosted night of cold-delights, 
+sinking those who did not see the dusk would be shunned,
+a great sadness ... and yet our True King has _finally_ come.
 
