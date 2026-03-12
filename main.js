@@ -97,3 +97,43 @@ if (donwloadbtn && warning) {
 
 
 // ------------------------------------------
+// Laptop Slideshow
+
+const laptopImages = [
+  "assets/simplify-laptop-shot-0.png",
+  "assets/simplify-laptop-shot-1.png",
+  // "assets/simplify-laptop-shot-2.png",
+  // "assets/simplify-laptop-shot-3.png",
+  // I need to remember to add here when adding more!!!
+];
+
+const slideshow = document.getElementById("laptop-slideshow");
+
+if (slideshow && laptopImages.length > 0) {
+  laptopImages.forEach((src, i) => {
+    const slide = document.createElement("div");
+    slide.className = "laptop-slide";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `Simplify laptop screenshot ${i + 1}`;
+    img.loading = i === 0 ? "eager" : "lazy";
+
+    slide.appendChild(img);
+    slideshow.appendChild(slide);
+  });
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slideshow.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  if (laptopImages.length > 1) {
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % laptopImages.length;
+      showSlide(currentIndex);
+    }, 9100);
+  }
+}
+
