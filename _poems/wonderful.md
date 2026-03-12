@@ -45,4 +45,4 @@ A caution ignored as we place our treasures in what we should not
 But leave such chaos, words cannot tell
 For looking to our own is what has led us to Hell
 So may I leave it be as such a simple piece
-That to look to God is to find ehat I can only describe as _wonderful_ unimaginable peace.
+That to look to God is to find what I can only describe as _wonderful_ unimaginable peace.
