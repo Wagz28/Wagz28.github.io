@@ -1,7 +1,7 @@
 ---
 title: "Web"
 date: 2022-04-08
-summary: "For good or bad, we make what we can"
+summary: "For good or bad, we make what we can."
 tags: [reflection]
 ---
 

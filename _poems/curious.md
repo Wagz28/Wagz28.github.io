@@ -1,7 +1,7 @@
 ---
-title: "Confusion without solution"
-date: 2022-04-07
-summary: "Nature restores, it's the gift of our Lord"
+title: "Curious"
+date: 2022-05-07
+summary: "Nature restores, it's the gift of our Lord."
 tags: [exasperated, gratitude, love, christian]
 ---
 

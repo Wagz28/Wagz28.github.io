@@ -1,7 +1,7 @@
 ---
 title: "The next café"
 date: 2023-08-02
-summary: "Amsterdam cafés, going from place to place"
+summary: "Amsterdam cafés, place to place to place..."
 tags: [reflection, peace]
 ---
 

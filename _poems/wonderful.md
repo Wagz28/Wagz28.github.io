@@ -1,6 +1,6 @@
 ---
 title: "Wonderful"
-date: 2026-03-05
+date: 2026-03-04
 summary: "My cup overflows"
 tags: [reverence, wonder, joy, christian]
 ---

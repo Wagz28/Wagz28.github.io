@@ -1,7 +1,7 @@
 ---
 title: "Happiness"
 date: 2023-04-04
-summary: "Even I scratched my memory for the last. Perhaps simply consider 'what is it?'"
+summary: "Even I scratched my memory for the last. Perhaps simply consider what it is"
 tags: [reflection, sorrow]
 ---
 

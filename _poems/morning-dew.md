@@ -1,7 +1,7 @@
 ---
 title: "Morning Dew"
 date: 2026-02-27
-summary: "Worship & Adore, what else is so sure?"
+summary: "Worship & Adore for what else is so sure?"
 tags: [love, worship, praise, christian, fullness]
 ---
 
