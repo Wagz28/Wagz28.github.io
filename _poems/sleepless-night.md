@@ -21,7 +21,7 @@ to the **God** of _endless days_
 **His** ways are higher than our ways
 They are good and pure
 If **He** tells to hold where it hurts
-I won't let go till it burns
+I won't let go even if it burns
 
 _Carry your cross_, as your flesh is torn
 _Trust_, when you cannot see how

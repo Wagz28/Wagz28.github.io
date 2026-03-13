@@ -33,4 +33,4 @@ Lit to guide us Home.
 Jesus, we adore You. Thank you.
 
 
-_Read Psalm 139, specifcally v7-12, v17..._
+_Read [Psalm 139](https://www.bible.com/bible/59/PSA.139), specifcally v7-12, v17..._
