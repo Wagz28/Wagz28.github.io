@@ -52,8 +52,8 @@ a company of evildoers encircles me;
 they have _pierced_ my hands and feet -
 _I can count all my bones_ -
 they stare and gloat over me;
-they divide my garments among them,
-and for my clothing they cast lots.
+they _divide_ my garments among them,
+and for my clothing _they cast lots_.
 ...
 Save me from the mouth of the lion!
 _You have rescued me_ from the horns of the wild oxen!
