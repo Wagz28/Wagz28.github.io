@@ -2,7 +2,7 @@
 title: "Curious"
 date: 2022-05-07
 summary: "Nature restores, it's the gift of our Lord."
-tags: [exasperated, gratitude, love, christian]
+tags: [depleted, gratitude, love, christian]
 ---
 
 So simple, so curious

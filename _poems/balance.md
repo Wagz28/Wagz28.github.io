@@ -2,7 +2,7 @@
 title: "Balance"
 date: 2023-03-02
 summary: "Spinning, spinning, don't stop, don't lose..."
-tags: [reflection, exasperation]
+tags: [reflection, depleted]
 ---
 
 Sadly the night burns to ash,

@@ -2,7 +2,7 @@
 title: "Dead Poets"
 date: 2025-08-08
 summary: "To live, not to say..."
-tags: [playful, chaos, reflection, observation]
+tags: [playful, chaos, reflection]
 ---
 
 To laugh, to read

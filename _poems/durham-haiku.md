@@ -2,7 +2,7 @@
 title: "Durham Haiku"
 date: 2025-10-07
 summary: "From sea to walking, what a joy for a day to be!!!"
-tags: [smile, free, peace]
+tags: [free, peace]
 ---
 
 Freezing seas and white snowy trees

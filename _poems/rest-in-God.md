@@ -2,7 +2,7 @@
 title: "Rest in God"
 date: 2026-02-14
 summary: "Rest, True Rest"
-tags: [gladness, gratitude, love, christian]
+tags: [gratitude, love, christian]
 ---
 
 Rest in God
