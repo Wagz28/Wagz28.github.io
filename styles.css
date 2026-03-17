@@ -717,6 +717,7 @@ button {
   flex-wrap: wrap;
   gap: 10px;
   margin: 24px 0 28px;
+  margin-bottom: 2.4rem;
 }
 
 .poetry-filter{
@@ -727,7 +728,7 @@ button {
   cursor: pointer;
   font: inherit;
   transition: 0.2s ease;
-  color: #1f1f1f !important;
+  color: #777;
 }
 
 .poetry-filter:hover{
@@ -735,7 +736,6 @@ button {
 }
 
 .poetry-filter.active{
-  background: #111;
   color: #fff;
   border-color: #111;
 }
