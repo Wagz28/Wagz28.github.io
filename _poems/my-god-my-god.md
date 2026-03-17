@@ -32,10 +32,11 @@ but why are they endless ways?
 Why do they always twist & turn,
 Is it brightness making them burn?
 And knowing this You sigh ...
-'Come to Me, all you who are weary and burdened, and I will give you rest - For on that cross, I share your cry ...
+'Come to Me, all you who are weary and burdened, 
+and I will give you rest - For on that cross, I share your cry ...
 My God, My God, _why_ have you forsaken Me?'
 
-[Psalm 22](https://www.bible.com/bible/59/PSA.22)
+[_Psalm 22_](https://www.bible.com/bible/59/PSA.22)
 My God, my God, why have You forsaken me?
 Why are You so far from saving me,
 from the words of my groaning?
