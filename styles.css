@@ -727,6 +727,7 @@ button {
   cursor: pointer;
   font: inherit;
   transition: 0.2s ease;
+  color: #1f1f1f !important;
 }
 
 .poetry-filter:hover{
