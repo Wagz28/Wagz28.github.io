@@ -712,7 +712,6 @@ button {
 
 /* ------------------------------ */
 
-
 .poetry-filters{
   display: flex;
   flex-wrap: wrap;
@@ -740,5 +739,6 @@ button {
   border-color: #111;
 }
 
-
 /* -------------------------------- */
+
+

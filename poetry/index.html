@@ -32,7 +32,7 @@ title: Poetry
     {% for poem in sorted_poems %}
       <article
         class="project poem-card"
-        data-tags="{% if poem.tags %}{% for tag in poem.tags %}{{ tag | slugify }}{% unless forloop.last %} {% endunless %}{% endfor %}{% endif %}"
+        data-tags="{% if poem.tags %}{% for tag in poem.tags %}{{ tag | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}"
       >
         <div class="project-text">
           <h3>{{ poem.title }}</h3>
@@ -75,13 +75,14 @@ title: Poetry
         button.classList.add("active");
 
         cards.forEach(card => {
-          const tags = card.dataset.tags ? card.dataset.tags.split(" ") : [];
+          const raw = card.dataset.tags || "";
+          const tags = raw
+            .split(",")
+            .map(tag => tag.trim())
+            .filter(Boolean);
 
-          if (selectedTag === "all" || tags.includes(selectedTag)) {
-            card.style.display = "";
-          } else {
-            card.style.display = "none";
-          }
+          const show = selectedTag === "all" || tags.includes(selectedTag);
+          card.style.display = show ? "" : "none";
         });
       });
     });
