@@ -711,3 +711,34 @@ button {
 }
 
 /* ------------------------------ */
+
+
+.poetry-filters{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 28px;
+}
+
+.poetry-filter{
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  transition: 0.2s ease;
+}
+
+.poetry-filter:hover{
+  transform: translateY(-1px);
+}
+
+.poetry-filter.active{
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+
+/* -------------------------------- */
