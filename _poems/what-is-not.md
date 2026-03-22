@@ -35,7 +35,8 @@ Okay, think from our Father's perspective
 Imagine there never is and never was
 Just Him and the Trinity, no you, no us...
 
-Do you see how the viewpoint stays no matter the game?
+Do you see how the viewpoint stays
+no matter the game?
 Let me try something else,
 again, another new frame
 
