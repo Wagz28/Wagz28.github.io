@@ -1,3 +1,10 @@
+---
+title: "What is not"
+date: 2026-03-21
+summary: "There's a poem I haven't yet made..."
+tags: [reflection, tinted, death, christian]
+---
+
 There's a poem I haven't yet made
 In it, I hope to convey how we are just a shade
 In the vast Light of eternity...
