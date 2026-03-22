@@ -1,10 +1,3 @@
----
-title: "What is not"
-date: 2026-03-21
-summary: "A poem I haven't yet made..."
-tags: [reflection, death, christian]
----
-
 There's a poem I haven't yet made
 In it, I hope to convey how we are just a shade
 In the vast Light of eternity...
@@ -23,10 +16,11 @@ A deceiving different version of another hereafter
 Perhaps instead, consider not the death of your body
 But the death of consciousness, the death of memory, of any trace of your story
 
-Think of another's consciousness, transfer yourself into that one,
-Then lose your current mind from current perspective and clean away what it came from
+Think of another's consciousness, 
+transfer yourself into that one,
+Then lose your current mind from current perspective and clean away what it came from.
 Inhabit that soul, perhaps ancient and bold
-perhaps a tree, and really inhabit it's memory.
+perhaps a tree, and really inhabit its memory.
 
 No. I'm not sure that works.
 
@@ -64,7 +58,8 @@ Senses without thought.
 Just your body, rotting in the ground
 A life of pain, an eternity without sound.
 Without mind or logic, just a soul in the earth
-Unnoticed, without form or life, only eternal hunger and eternal thirst
+Unnoticed, without form or life,
+only eternal hunger and eternal thirst
 Thirst for what is, as it is what is not
 Only decay, only slow disappearance
 Never real, yet formless desire and unnatural wants... 
@@ -78,7 +73,8 @@ No painless whisper of a perspective hither
 Just pain-filled death, without goodness or substance,
 Life or gain, treasure or fame...
 
-Please _realise_ what kind of existence, what shade of life in nothingness remains
+Please _realise_ what kind of existence, 
+what shade of life in nothingness remains
 When you choose not-God.
 
 It's not a game.
