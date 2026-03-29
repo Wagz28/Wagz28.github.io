@@ -77,7 +77,7 @@ For what is of Him, for what Law defines
 For what is accredited, for the end of time
 Worthy of more than majesty & splendour
 Yet such poor words have I
-A recurrence as words cannot not satisfy.
+A recurrence as words cannot satisfy.
 Truth.
 As clear as can be yet never to be seen
 True?
