@@ -83,18 +83,6 @@ document.querySelectorAll("a, button").forEach(el => {
   });
 });
 
-//  ----------------------------------------
-// Download Double Check
-
-const donwloadbtn = document.getElementById("download-btn");
-const warning = document.getElementById("download-warning");
-
-if (donwloadbtn && warning) {
-  donwloadbtn.addEventListener("click", () => {
-    warning.classList.toggle("hidden");
-  });
-}
-
 
 // ------------------------------------------
 // Laptop Slideshow
@@ -137,6 +125,8 @@ if (slideshow && laptopImages.length > 0) {
   }
 }
 
+// -------------------------
+// Downloading APK
 
 const disclaimerBtn = document.getElementById("download-btn");
 const disclaimerBox = document.getElementById("download-warning");
@@ -148,103 +138,56 @@ const APK_URL = "/downloads/simplify-android-v1.0.8.apk";
 const APK_VERSION = "v1.0.8";
 const APK_SHA256 = "E8777914D7C6EC22C280FE4B1353156C8271898A6057ED96C27B597C86E6E649";
 
-disclaimerBtn.addEventListener("click", () => {
-  disclaimerBox.classList.toggle("hidden");
-});
+if (disclaimerBtn && disclaimerBox) {
+  disclaimerBtn.addEventListener("click", () => {
+    disclaimerBox.classList.toggle("hidden");
+  });
+}
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+if (form && submitBtn && note) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Sending...";
-  note.textContent = "Submitting...";
-  note.classList.remove("download-error");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    note.textContent = "Submitting...";
+    note.classList.remove("download-error");
 
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        Accept: "application/json"
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
       }
-    });
 
-    if (!response.ok) {
-      throw new Error("Submission failed");
-    }
+      form.reset();
+      note.textContent = "Thanks. Your request has been submitted.";
+      submitBtn.textContent = "Sent";
 
-    form.reset();
-    note.textContent = "Thank you. Preparing download...";
-    submitBtn.textContent = "Sent";
+      setTimeout(() => {
+        openDownloadModal();
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Email me the APK";
+        note.textContent = "You can submit another email if needed.";
+      }, 1800);
 
-    setTimeout(() => {
-      openDownloadModal();
+    } catch (err) {
+      note.textContent = "Something went wrong. Please try again.";
+      note.classList.add("download-error");
       submitBtn.disabled = false;
       submitBtn.textContent = "Email me the APK";
-      note.textContent = "You can submit another email if needed.";
-    }, 1800);
-
-  } catch (err) {
-    note.textContent = "Something went wrong. Please try again.";
-    note.classList.add("download-error");
-    submitBtn.disabled = false;
-    submitBtn.textContent = "Email me the APK";
-  }
-});
-
-function openDownloadModal() {
-  const existing = document.getElementById("download-modal-overlay");
-  if (existing) existing.remove();
-
-  const overlay = document.createElement("div");
-  overlay.id = "download-modal-overlay";
-  overlay.className = "download-modal-overlay";
-
-  overlay.innerHTML = `
-    <div class="download-modal" role="dialog" aria-modal="true" aria-labelledby="download-modal-title">
-      <button class="download-modal-close" type="button" aria-label="Close">×</button>
-
-      <h3 id="download-modal-title">Your download is ready</h3>
-
-      <p>
-        Thank you. You can now download <strong>Simplify Android ${APK_VERSION}</strong>.
-      </p>
-
-      <a class="download-btn" href="${APK_URL}" download>
-        Download APK
-      </a>
-
-      <div class="checksum-inline modal-checksum">
-        <span class="checksum-label">SHA256</span>
-        <code>${APK_SHA256}</code>
-      </div>
-    </div>
-  `;
-
-  document.body.appendChild(overlay);
-  document.body.classList.add("modal-open");
-
-  const closeBtn = overlay.querySelector(".download-modal-close");
-
-  function closeModal() {
-    overlay.remove();
-    document.body.classList.remove("modal-open");
-  }
-
-  closeBtn.addEventListener("click", closeModal);
-
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) closeModal();
-  });
-
-  document.addEventListener("keydown", function escHandler(e) {
-    if (e.key === "Escape") {
-      closeModal();
-      document.removeEventListener("keydown", escHandler);
     }
   });
 }
 
+// --------------------
+// Url maintenance
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
@@ -274,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const url = new URL(rawHref, window.location.origin);
 
     // 🔑 KEY LINE: only modify same-origin links
-    if (url.origin !== window.location.origin) return;
+    if (url.hostname !== window.location.hostname) return;
 
     if (!url.searchParams.has("src")) {
       url.searchParams.set("src", src);
