@@ -137,3 +137,152 @@ if (slideshow && laptopImages.length > 0) {
   }
 }
 
+
+const disclaimerBtn = document.getElementById("download-btn");
+const disclaimerBox = document.getElementById("download-warning");
+const form = document.getElementById("download-form");
+const submitBtn = document.getElementById("download-submit-btn");
+const note = document.getElementById("download-note");
+
+const APK_URL = "/downloads/simplify-android-v1.0.8.apk";
+const APK_VERSION = "v1.0.8";
+const APK_SHA256 = "E8777914D7C6EC22C280FE4B1353156C8271898A6057ED96C27B597C86E6E649";
+
+disclaimerBtn.addEventListener("click", () => {
+  disclaimerBox.classList.toggle("hidden");
+});
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  note.textContent = "Submitting...";
+  note.classList.remove("download-error");
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error("Submission failed");
+    }
+
+    form.reset();
+    note.textContent = "Thank you. Preparing download...";
+    submitBtn.textContent = "Sent";
+
+    setTimeout(() => {
+      openDownloadModal();
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Email me the APK";
+      note.textContent = "You can submit another email if needed.";
+    }, 1800);
+
+  } catch (err) {
+    note.textContent = "Something went wrong. Please try again.";
+    note.classList.add("download-error");
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Email me the APK";
+  }
+});
+
+function openDownloadModal() {
+  const existing = document.getElementById("download-modal-overlay");
+  if (existing) existing.remove();
+
+  const overlay = document.createElement("div");
+  overlay.id = "download-modal-overlay";
+  overlay.className = "download-modal-overlay";
+
+  overlay.innerHTML = `
+    <div class="download-modal" role="dialog" aria-modal="true" aria-labelledby="download-modal-title">
+      <button class="download-modal-close" type="button" aria-label="Close">×</button>
+
+      <h3 id="download-modal-title">Your download is ready</h3>
+
+      <p>
+        Thank you. You can now download <strong>Simplify Android ${APK_VERSION}</strong>.
+      </p>
+
+      <a class="download-btn" href="${APK_URL}" download>
+        Download APK
+      </a>
+
+      <div class="checksum-inline modal-checksum">
+        <span class="checksum-label">SHA256</span>
+        <code>${APK_SHA256}</code>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+  document.body.classList.add("modal-open");
+
+  const closeBtn = overlay.querySelector(".download-modal-close");
+
+  function closeModal() {
+    overlay.remove();
+    document.body.classList.remove("modal-open");
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeModal();
+  });
+
+  document.addEventListener("keydown", function escHandler(e) {
+    if (e.key === "Escape") {
+      closeModal();
+      document.removeEventListener("keydown", escHandler);
+    }
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const src = params.get("src") || localStorage.getItem("src");
+
+  if (!src) return;
+
+  // store it once if present
+  if (params.get("src")) {
+    localStorage.setItem("src", params.get("src"));
+  }
+
+  const links = document.querySelectorAll("a[href]");
+
+  links.forEach(link => {
+    const rawHref = link.getAttribute("href");
+    if (!rawHref) return;
+
+    // Skip anchors, mail, tel, JS
+    if (
+      rawHref.startsWith("#") ||
+      rawHref.startsWith("mailto:") ||
+      rawHref.startsWith("tel:") ||
+      rawHref.startsWith("javascript:")
+    ) return;
+
+    const url = new URL(rawHref, window.location.origin);
+
+    // 🔑 KEY LINE: only modify same-origin links
+    if (url.origin !== window.location.origin) return;
+
+    if (!url.searchParams.has("src")) {
+      url.searchParams.set("src", src);
+    }
+
+    link.setAttribute(
+      "href",
+      url.pathname + url.search + url.hash
+    );
+  });
+});

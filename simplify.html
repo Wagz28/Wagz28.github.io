@@ -89,8 +89,66 @@
       </div>
     </section>
 
-    <!-- Download -->
+    <!-- Email -> Download -->
     <section class="section">
+      <h2>Download</h2>
+
+      <div class="download-box">
+        <p>
+          Enter your email to receive the Simplify Android APK link and SHA256 checksum.
+        </p>
+
+        <button id="download-btn" type="button">Disclaimer</button>
+
+        <div id="download-warning" class="hidden">
+          <p>
+            This is a personal project build. The application requests only
+            necessary permissions for local storage functionality.
+            The SHA256 hash is provided for integrity verification.
+          </p>
+
+          <form
+            action="https://formspree.io/f/xwvwqjle"
+            method="POST"
+            class="download-form"
+            id="download-form"
+          >
+            <label for="download-email">Email</label>
+            <input
+              type="email"
+              id="download-email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <input type="hidden" name="request_type" value="Simplify APK request">
+            <input type="hidden" name="app_name" value="Simplify Android">
+            <input type="hidden" name="version" value="v1.0.4">
+            <input
+              type="hidden"
+              name="apk_url"
+              value="https://benwagstaff.com/downloads/simplify-android-v1.0.4.apk"
+            />
+            <input
+              type="hidden"
+              name="sha256"
+              value="09FD66507AE0F0EE51AECFF05315C4987219287847DABAED1376C599FFF43762"
+            />
+
+            <button class="download-btn" id="download-submit-btn" type="submit">
+              Email me the APK
+            </button>
+          </form>
+
+          <p class="download-note" id="download-note">
+            Enter your email to continue.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section">
       <h2>Download</h2>
 
       <div class="download-box">
@@ -119,16 +177,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Source - Not yet happy to be public -->
-    <!-- <section class="section">
-      <h2>Source</h2>
-      <p>
-        <a href="https://github.com/Wagz28/simplify" target="_blank">
-          View Source on GitHub
-        </a>
-      </p>
     </section> -->
 
     <footer class="footer">

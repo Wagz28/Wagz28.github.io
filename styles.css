@@ -741,4 +741,83 @@ button {
 
 /* -------------------------------- */
 
+/* Simplify Download Email */
 
+.download-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  max-width: 420px;
+}
+
+.download-form input[type="email"] {
+  padding: 12px 14px;
+  border: 1px solid #b8b8b8;
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+  color: #222;
+}
+
+.download-note {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.download-error {
+  color: #b00020;
+  opacity: 1;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.download-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.download-modal {
+  position: relative;
+  width: min(520px, 100%);
+  background: #fff;
+  color: #222;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.download-modal h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.download-modal p {
+  margin-bottom: 18px;
+}
+
+.download-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-checksum {
+  margin-top: 16px;
+  word-break: break-all;
+}
+/* ----------------------- */
