@@ -30,7 +30,7 @@ Spirit filled body, works filled faith
 Yet on hearing was accredited
 That righteous we proclaim!
 Who sigh and groan
-Over what is it [to know not](www.benwagstaff.com/poems/to-know-not.md?src=phantom)
+Over what is it [to know not](https://www.benwagstaff.com/poems/to-know-not/?src=phantom)
 But for the goodness of The Name
 Each rejoices in each own's lot.
 For exceedingly so,
