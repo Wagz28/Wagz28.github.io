@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   <script>
     (function () {
-      const path = window.location.pathname.replace(/^\/+|\/+$/g, "");
-      const parts = path.split("/");
+      const path = window.location.pathname;
+      const match = path.match(/^\/s\/([^/]+)(\/.*)?$/);
 
-      if (parts[0] === "s" && parts[1]) {
-        const src = encodeURIComponent(parts[1]);
-        sessionStorage.setItem("site_src", parts[1]);
-        window.location.replace("/?src=" + src);
+      if (match) {
+        const src = decodeURIComponent(match[1]);
+        const remainder = match[2] || "/";
+
+        sessionStorage.setItem("site_src", src);
+
+        const target = remainder + window.location.search + window.location.hash;
+        window.location.replace(target);
         return;
       }
 

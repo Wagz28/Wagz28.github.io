@@ -190,23 +190,13 @@ if (form && submitBtn && note) {
 // Url maintenance
 
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const src = params.get("src") || localStorage.getItem("src");
-
+  const src = sessionStorage.getItem("site_src");
   if (!src) return;
 
-  // store it once if present
-  if (params.get("src")) {
-    localStorage.setItem("src", params.get("src"));
-  }
-
-  const links = document.querySelectorAll("a[href]");
-
-  links.forEach(link => {
+  document.querySelectorAll("a[href]").forEach(link => {
     const rawHref = link.getAttribute("href");
     if (!rawHref) return;
 
-    // Skip anchors, mail, tel, JS
     if (
       rawHref.startsWith("#") ||
       rawHref.startsWith("mailto:") ||
@@ -216,16 +206,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const url = new URL(rawHref, window.location.origin);
 
-    // 🔑 KEY LINE: only modify same-origin links
-    if (url.hostname !== window.location.hostname) return;
+    if (url.origin !== window.location.origin) return;
 
-    if (!url.searchParams.has("src")) {
-      url.searchParams.set("src", src);
-    }
+    // already tagged
+    if (url.pathname.startsWith(`/s/${src}/`) || url.pathname === `/s/${src}`) return;
 
-    link.setAttribute(
-      "href",
-      url.pathname + url.search + url.hash
-    );
+    const taggedPath =
+      `/s/${encodeURIComponent(src)}${url.pathname.startsWith("/") ? "" : "/"}${url.pathname}`;
+
+    link.setAttribute("href", taggedPath + url.search + url.hash);
   });
 });
