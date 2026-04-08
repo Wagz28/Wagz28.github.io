@@ -14,7 +14,7 @@ Abundance abounding
 The blessings of the Lord
 In trial and fire, pain and disdain
 Trials will always find triumph
-In the Lord's will that is plain
+In the Lord's will, that is plain
 And may it be
 Such as forever all have seen
 
@@ -27,7 +27,7 @@ Through whom all created came to be
 
 My heart's desire, in whom I am clean
 Purify me to Your glory
-Make my testimony part of it's story
+Make my testimony part of its story
 
 Your body and bride
 One in flesh, now Spirit
