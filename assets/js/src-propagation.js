@@ -1,6 +1,7 @@
 (function () {
-  const url = new URL(window.location.href);
-  const currentSrc = url.searchParams.get("src") || sessionStorage.getItem("site_src");
+  const match = window.location.pathname.match(/^\/s\/([^/]+)/);
+  const currentSrc = match ? decodeURIComponent(match[1]) : sessionStorage.getItem("site_src");
+
   if (!currentSrc) return;
 
   sessionStorage.setItem("site_src", currentSrc);
@@ -11,6 +12,7 @@
 
     const href = a.getAttribute("href");
     if (!href) return;
+
     if (
       href.startsWith("#") ||
       href.startsWith("mailto:") ||
@@ -21,9 +23,11 @@
     const target = new URL(a.href, window.location.origin);
     if (target.origin !== window.location.origin) return;
 
-    if (!target.searchParams.has("src")) {
-      target.searchParams.set("src", currentSrc);
-      a.href = target.pathname + target.search + target.hash;
-    }
+    // already tagged
+    if (target.pathname.startsWith(`/s/${currentSrc}`)) return;
+
+    const newPath = `/s/${currentSrc}${target.pathname}`;
+
+    a.href = newPath + target.search + target.hash;
   });
 })();
