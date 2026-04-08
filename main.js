@@ -187,33 +187,3 @@ if (form && submitBtn && note) {
 }
 
 // --------------------
-// // Url maintenance
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const src = sessionStorage.getItem("site_src");
-//   if (!src) return;
-
-//   document.querySelectorAll("a[href]").forEach(link => {
-//     const rawHref = link.getAttribute("href");
-//     if (!rawHref) return;
-
-//     if (
-//       rawHref.startsWith("#") ||
-//       rawHref.startsWith("mailto:") ||
-//       rawHref.startsWith("tel:") ||
-//       rawHref.startsWith("javascript:")
-//     ) return;
-
-//     const url = new URL(rawHref, window.location.origin);
-
-//     if (url.origin !== window.location.origin) return;
-
-//     // already tagged
-//     if (url.pathname.startsWith(`/s/${src}/`) || url.pathname === `/s/${src}`) return;
-
-//     const taggedPath =
-//       `/s/${encodeURIComponent(src)}${url.pathname.startsWith("/") ? "" : "/"}${url.pathname}`;
-
-//     link.setAttribute("href", taggedPath + url.search + url.hash);
-//   });
-// });
