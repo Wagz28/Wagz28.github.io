@@ -28,9 +28,9 @@ At the east gate, fours of fours
 Lion, human, eagle and cherub.
 Spirit filled body, works filled faith
 Yet on hearing was accredited
-That righteous we proclaim!
+That righteousness we proclaim!
 Who sigh and groan
-Over what is it [to know not](https://www.benwagstaff.com/s/poemLink/poetry/to-know-not/)
+Over what it is [to know not](https://www.benwagstaff.com/s/poemLink/poetry/to-know-not/)
 But for the goodness of The Name
 Each rejoices in each own's lot.
 For exceedingly so,
