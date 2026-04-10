@@ -29,19 +29,19 @@ And for a nothink's sake?
 
 No. Let us study,
 And see what we may be found,
-As long as I do not have to better that weather.
+..._as long as I do not have to better that weather._
 
-And so it went on...
+And so it went on.
 No real tale, just an joking old sail
 Flapping in a breeze, a softness, a sigh
 A sneeze!! Quick!, take to board,
 A life to live, a life to hoard!!!
 One time, gotta make a mine.
 Tell you who it ain't, ain't none but mine.
-Mine! _Mine_, mine?
+Mine! _Mine_, ... mine?
 Oh deary dearest, if you don't mind...
-What exactly is the, well, current _time_?
+What exactly is, well, the current _time_?
 I set the compass you see,
-But well, oh, well; nevermind.
+But well, ... oh, well; nevermind.
 
 [Jeremiah 2](https://www.bible.com/bible/59/JER.2)
