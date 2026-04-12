@@ -54,4 +54,5 @@ Such darkness, as Light?
 
 To You.
 
-[Psalm 139](https://www.bible.com/bible/59/PSA.139), [Psalm 2](https://www.bible.com/bible/59/PSA.2)
+[Psalm 139](https://www.bible.com/bible/59/PSA.139)
+[Psalm 2](https://www.bible.com/bible/59/PSA.2)

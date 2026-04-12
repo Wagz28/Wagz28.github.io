@@ -38,4 +38,7 @@ O exceedingly so
 That passion of Christ:
 Suffient, when not forgot.
 
-[Ezekiel 10](https://www.bible.com/bible/59/EZK.10), [Romans 10:17](https://www.bible.com/bible/59/ROM.10.17), [Genesis 15:6](https://www.bible.com/bible/59/GEN.15.6), [James 2:12-17](https://www.bible.com/bible/59/JAS.2.12-17)
+[Ezekiel 10](https://www.bible.com/bible/59/EZK.10)
+[Romans 10:17](https://www.bible.com/bible/59/ROM.10.17)
+[Genesis 15:6](https://www.bible.com/bible/59/GEN.15.6)
+[James 2:12-17](https://www.bible.com/bible/59/JAS.2.12-17)
