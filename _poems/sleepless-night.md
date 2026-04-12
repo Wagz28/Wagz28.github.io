@@ -2,7 +2,7 @@
 title: "Sleepness Night & Phantom Goodbyes"
 date: 2025-10-05
 summary: "Keep the distance."
-tags: [consolation, love, christian]
+tags: [consolation, love, trust, christian]
 ---
 
 _Praise, Praise, Praise_
@@ -20,7 +20,7 @@ So _Praise, Praise, Praise_
 to the **God** of _endless days_
 **His** ways are higher than our ways
 They are good and pure
-If **He** tells to hold where it hurts
+If **He** tells me to hold where it hurts
 I won't let go even if it burns
 
 _Carry your cross_, as your flesh is torn

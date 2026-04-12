@@ -5,7 +5,7 @@ summary: "My ... My."
 tags: [playful, depleted]
 ---
 
-My ... my, you make me sigh,
+My oh my, you make me sigh,
 Whisked far away 'n I had no say,
 One week with you, one week to play
 The bright sun decays... the blue skies turn grey
