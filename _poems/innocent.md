@@ -1,7 +1,7 @@
 ---
 title: "Innocent"
 date: 2026-04-13
-summary: "Worthy is the Lamb who was slain. Now therefore, serve the Lord with fear, and rejoice with trembling. (Rev 5:12, Psalm 2:11)"
+summary: "Worthy is the Lamb who was slain. Now therefore, serve the Lord with fear, and rejoice with trembling."
 tags: [fear-of-Jesus, submission, lament, worship, praise, reverence, wonder, awe, gratitude, christian]
 ---
 
