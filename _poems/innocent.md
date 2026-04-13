@@ -61,7 +61,7 @@ which has conquered darkness,
 [1 Peter 3:18-22](https://www.bible.com/bible/59/1PE.3.18-22), [Ephesians 4:9](https://www.bible.com/bible/59/EPH.4.9)
 [Ezekiel 20:44](https://www.bible.com/bible/59/EZK.20.44), [Psalm 25:11](https://www.bible.com/bible/59/PSA.25.11), [Psalm 23:3](https://www.bible.com/bible/59/PSA.23.3)
 
-[James 3:5-7](https://www.bible.com/bible/59/JAS.3.5-7)
+[James 3:5-6](https://www.bible.com/bible/59/JAS.3.5-6)
 [Isaiah 53:5](https://www.bible.com/bible/59/ISA.53.5), [Hebrews 6:6](https://www.bible.com/bible/59/HEB.6.6), [1 Peter 2:24](https://www.bible.com/bible/59/1PE.2.24)
 [John 15:20-22](https://www.bible.com/bible/59/JHN.15.20-22)
 [Matthew 11:28-30](https://www.bible.com/bible/59/MAT.11.28-30)
