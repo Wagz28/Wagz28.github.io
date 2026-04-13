@@ -43,7 +43,7 @@ which has conquered darkness,
 ---
 
 [The Blood](https://open.spotify.com/track/0tWHbTk8yeVsC1SSHbFXgC?si=6472e8cd0fdc4767)
-[1 Peter 2:22](https://www.bible.com/bible/59/1PE.2.22), [2 Corinthians 5:21](https://www.bible.com/bible/59/2CO.5.21), [John 18:38](https://www.bible.com/bible/59/JHN.18.38)
+[1 Peter 2:22](https://www.bible.com/bible/59/1PE.2.22), [2 Corinthians 5:21](https://www.bible.com/bible/59/2CO.5.21), [1 Peter 1:17-19](https://www.bible.com/bible/59/1PE.1.17-19), [John 18:38](https://www.bible.com/bible/59/JHN.18.38)
 [John 1:29](https://www.bible.com/bible/59/JHN.1.29), [Revelation 5:9, 12](https://www.bible.com/bible/59/REV.5.9,12)
 [Isaiah 53:7](https://www.bible.com/bible/59/ISA.53.7)
 
