@@ -21,21 +21,28 @@ Hang Him cursed _on_ Golgotha, The Place of a Skull.
 My God, My God, I am poured out like water,
 My strength is dried up, my bones are out of joint,
 Bulls & dogs encompass me, they mock & gloat,
-Pain ravages my flesh, suffering is the bed of My soul...
+Pain ravages my flesh, 
+suffering is the bed of My soul...
 in _agony_, I pray, "Not My will, but Yours, be done."
 "
 
 And so _willingly_, **He drank**...
 
-Weeping & gnashing of teeth, terrors & torment, bitter to His core.
-"**Father**, _forgive them_, for they know _not_ what they do."
+Weeping & gnashing of teeth, 
+terrors & torment, bitter to His core.
+"**Father**, _forgive them_,
+for they know _not_ what they do."
 Into the depths He descended, to even our score,
-Our God most high, for goodness & mercy & justice for all.
+Our God most high, 
+for goodness & mercy & justice for all.
 For His Name's sake, still judging what is cruel.
 
-With hands that have shaped Hell, we have crucified Him as well
-Yet He turns our sorrow into joy, washed clean from the horror **He** destroyed.
-"Come to me all who are weary, and I will give you _rest_."
+With hands that have shaped Hell,
+we have crucified Him as well
+Yet He turns our sorrow into joy, 
+washed clean from the horror **He** destroyed.
+"Come to me all who are weary, 
+and I will give you _rest_."
 His burden & Life are _Light_, 
 which has conquered darkness,
 **Given**, _freely,_ to _all mankind_.
