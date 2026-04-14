@@ -14,8 +14,8 @@ You, O Lord, are the fabric of my being
 The designer, the sustainer,
 A refuge, A protector.
 
-I live for a gasp & am pulled down under
-Yet this place feels like home, in my heart; a thunder.
+I live for a gasp & am pulled down under -
+Yet this place feels like home, in my heart: a thunder.
 And you're always making me grow, from distant to the close
 A thorn in my thoughts, in pain you come again
 Yet I promised this; why? you may rightly wonder:
