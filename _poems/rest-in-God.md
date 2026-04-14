@@ -28,4 +28,4 @@ the Lamb who was slain,
 who's blood brings Life Eternal, 
 who washes death from our spirit
 and brings His own into our hearts.
-Praise Him, Love Him, and in Him...Truly Rest.
+Praise Him, Love Him, and in Him..._Truly_ Rest.
