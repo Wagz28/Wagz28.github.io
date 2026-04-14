@@ -1,8 +1,8 @@
 ---
 title: "Tested"
-date: 2026-04-12
+date: 2026-04-13
 summary: "Indeed, seemingly, no matter what I do..."
-tags: [inquiry, submission, frustration, contemplation, christian]
+tags: [inquiry, submission, frustration, contemplation, christian, consolation]
 ---
 
 Am I being tried?
@@ -27,5 +27,5 @@ For the glory of His Name, for Love of His body
 Am I so deceived I cannot tell?
 Am I so far gone, I hear _not_ Your words _as well_?
 I know what the world says, yet I do not hear it from **You**.
-A true Heart listen, and lays down life in Love.
+A true Heart listens, and lays down life in Love.
 Lays down a heart in worship, longing to listen from above...

@@ -44,7 +44,7 @@ And purify what I'm made to be
 Yet does anyone know what they ask?
 A drop of water in the rain
 Now a stranger to my brain
-Yet why will it not fall
+Yet why will it not fall? ...
 And melt away from its call
 
 One thing I have learnt
