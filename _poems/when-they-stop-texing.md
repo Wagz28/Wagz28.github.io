@@ -63,4 +63,4 @@ Help me remember,
 
 Your **Word** _always_ rings **True**
 
-[The Lamb | William Blake](https://www.poetryfoundation.org/poems/43670/the-lamb-56d222765a3e1)
+[The Lamb ~ William Blake](https://www.poetryfoundation.org/poems/43670/the-lamb-56d222765a3e1)
