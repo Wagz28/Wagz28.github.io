@@ -29,7 +29,8 @@ Yet this is only a passing memento
 A signature of mine,
 cast upon some lost dime;
 Spent in waste and with something of distaste
-I crave to find words but language is a world of waste
+I crave to find words...
+but language is a world of waste
 
 See it there lying on the stair[...](https://benwagstaff.com/poetry/web/)
 Happy are you hun',
