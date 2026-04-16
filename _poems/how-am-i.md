@@ -2,7 +2,7 @@
 title: "How am I?"
 date: 2026-04-16
 summary: "Indeed, but first, what of Thy?"
-tags: [reflection, contemplation, christian]
+tags: [reflection, contemplation, wonder, contrast, fullness, christian]
 ---
 
 As the rising tides and the crashing storms
