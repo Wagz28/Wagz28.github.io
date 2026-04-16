@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logbook_Ben_W.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="logs">Logs</h1>
+<blockquote>
+<h1 id="date-180325">Date: 18/03/25</h1>
+<ul>
+<li>Exploring the use of Kanbn for Agile collaboration - got comfortable with branching/merges and cleaning up gitignored .NET build files. Exploring how to use .Net, noting some similarity in structure to NodeJs.</li>
+</ul>
+</blockquote>
+<blockquote>
+<h1 id="date-010425">Date 01/04/25</h1>
+<ul>
+<li>Debating use of flat file vs database (DB). Decided on SQLite DB; easy transition if we want a different DB, efficient storage and organisation structure, dynamic, scalable, flexible but slightly more effort to set up.</li>
+<li>Did many Kanbn tasks trying to nail down precisely how everything will work.</li>
+</ul>
+</blockquote>
+<blockquote>
+<h1 id="date-020425">Date 02/04/25</h1>
+<p>Microsoft Azure Setup</p>
+<ul>
+<li>Watched the set up page and videos. Learned we can manage permissions for the same resource group, we will be able to link easily to a translator, a sql databse and containers all within Azure.</li>
+<li>Decided we will do everything based in Azure.</li>
+<li>Tutorial on WebApp with DB: https://portal.azure.com/?quickstart=true#view/Microsoft_Azure_Resources/ServicePage.ReactView/id/WebApp</li>
+<li>Links extremely well to their co-owned Github.</li>
+</ul>
+<p>After researching Azure's high-availability reference architecture (App Gateway, VNet, Private Link, WAF), we opted for the simpler App Service + Azure SQL pattern—enough for our needs without unnecessary complexity.
+<img src="https://www.dropbox.com/scl/fi/217mcytzcemlr7kkg6225/image1.png?rlkey=0d7kdxfkwpb1yx9ayadniztk8&st=6xhb6g2m&raw=1" alt="img1"></p>
+<p>For a cloud-based WebApp with a database it seems to just be; Azure App Service → Hosts our C# WebApp (.NET-9), Azure Database → Cloud-based relational database, App Service → DB Connection → Securely connect the WebApp to the database</p>
+<p>Sprint-1 (Local Development):</p>
+<ol>
+<li>Reuben codes the C# WebApp locally temporarily using SQLite.</li>
+<li>I set up an Azure SQL database and connection locally.</li>
+<li>Mock Data Local Testing.</li>
+</ol>
+<p>Sprint-2+ (Cloud-Integration, Improvements &amp; Features)::</p>
+<ol>
+<li>Push the app to Azure.</li>
+<li>Configure CI/CD deployment.</li>
+<li>Add data-analytics.</li>
+<li>Improve performance &amp; security.</li>
+</ol>
+<ul>
+<li>Made a resource group, not a high level project so no tagging needed.</li>
+</ul>
+<p>Very simple; Search for &quot;Resource Groups&quot; on Azure Portal, Click Create, Name it, Pick a Region, Click Review+Create.
+<img src="https://www.dropbox.com/scl/fi/koi6up8q9qu1k0x960c0f/image2.png?rlkey=1z3ei9ye4cck71zkpiptxobhf&st=6138auot&raw=1" alt="img2">\</p>
+<p>Created Resource Group, assigned Reuben Contributor via IAM, spun up Azure SQL (Free Tier), and later added our custom domain via CNAME/TXT verification.</p>
+<p>Provisioned a single Azure SQL Free-Tier database (10 DBs, 100K vCore-seconds, 32 GB data + backup) inside our Resource Group; created a new server using Microsoft Entra-only authentication (not supported on Free Tier), enabled public access and allowed Azure services, whitelisted our dev IP, skipped ledger diagnostics, noted the future need for a managed identity, and set the collation to Latin1_General_100_CI_AS_SC_UTF8 for broad character support (lots of languages).
+Note: 5.50$ per-month after the free trial.
+<img src="https://www.dropbox.com/scl/fi/g3hk8jbf972texydrqeyd/image3.png?rlkey=20vke3ohh9d2j8ryncyquk6yf&st=of6vzlui&raw=1" alt="img3"></p>
+<p>Server is container managing authentication/security. The App-service runs our .Net-App, has a Managed Identity, secure but negates need of username/password.</p>
+<p>The next steps require:</p>
+<ol>
+<li>Enable a managed identity on app service: In the App-Service, turn on System-assigned Managed Identity in Settings/Identity.</li>
+<li>Grant Access for App: Go to SQL Server, under Active Directory admin, enable Entra-authentication. Then run in the Query-Editor for the database:<br>
+<code>CREATE USER [your-app-service-name] FROM EXTERNAL PROVIDER;</code><br>
+<code>ALTER ROLE db_owner ADD MEMBER [your-app-service-name];</code></li>
+<li>Connect .NET:</li>
+</ol>
+<ul>
+<li>appsettings.json:
+<img src="https://www.dropbox.com/scl/fi/t5qqbh8an5w8aghhzd0jy/code1.png?rlkey=s48olahy247mxpbubq9vs4pjf&st=jqvfa0eu&raw=1" alt="code1">
+cmd: <code>dotnet add package Azure.Identity</code>, <code>dotnet add package Microsoft.Data.SqlClient</code><br>
+Program.cs: <code>var credential = new DefaultAzureCredential();</code>\</li>
+</ul>
+<ol start="4">
+<li>Deployment of the .NET into the App Service: Make app service, realised later don't make it private as this forgets the Github deployment isn't within Azure, so connect to Github Repository and enable pre-configured CI!!!</li>
+</ol>
+</blockquote>
+<blockquote>
+<h1 id="date-030425">Date 03/04/25</h1>
+<p>Create an Azure SQL Database using the REST API?: https://learn.microsoft.com/en-us/rest/api/sql/rest-api-sql-create-or-update-database<br>
+Configure continuous deployment to Azure App Service?: https://learn.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment?tabs=github%2Cgithubactions#configure-the-deployment-source<br>
+Needed to re-add IP-address for Query Editor Acces?:<br>
+<img src="https://www.dropbox.com/scl/fi/nn0izcuwv0o929voiy224/image4.png?rlkey=b77l1h53jut5ik7nfx89g6f04&st=aylmxojo&raw=1" alt="img4">
+<img src="https://www.dropbox.com/scl/fi/lkmnnab3tuwrun3n3rmap/image5.png?rlkey=v8pllxmte5tcs5bnn6a8umqli&st=9499ocb7&raw=1" alt="img5"><br>
+Note: Don't leave Query Editor with an unsaved complex script as it will be lost.<br>
+Merged everything previous and hopefully it is now connected to the DB. CI working well - automatically re-deploying with the pushed changes!!!</p>
+<p>Testing DB-connection in Program.cs:<br>
+Not working! Alter roles?<br>
+<img src="https://www.dropbox.com/scl/fi/4f13d3rlhb17bcfgydv9x/image6.png?rlkey=kqv5prao3ikkrzq6b4rtjzy80&st=23nikwah&raw=1" alt="img6"><br>
+Free Plan does not include Managed Identity: need to switch to SQL authentication!!!
+<img src="https://www.dropbox.com/scl/fi/3zdfz0b6ep6kl4fp0fho8/code2.png?rlkey=ze501e4rwyzpekmxxkmjy16pe&st=37vpoyky&raw=1" alt="code2">
+cmd: <code>dotnet remove package Azure.Identity</code>, <code>dotnet clean</code>, <code>dotnet build</code><br>
+Removed identity use in Program.cs and appsettings.json:
+<img src="https://www.dropbox.com/scl/fi/l1bi3digoglf8n5r3sosh/code3.png?rlkey=g5qqb3s1s0hzc0ofvkglvp3di&st=g2zxxcp5&raw=1" alt="code3">
+Checking LyricalUser in the DB:
+<img src="https://www.dropbox.com/scl/fi/t0cfpo48irpl50n69umvj/code4.png?rlkey=ecfwyyu2oah2qlvmc6527qi31&st=ibb2o2bv&raw=1" alt="code4"></p>
+<h2 id="logging">Logging:</h2>
+<p><strong>Program.cs Logging not working?!</strong></p>
+<ul>
+<li>Enabling App Service logs didn't work. Log stream connects, app runs, no logs.</li>
+<li>cmd: <code>dotnet add package Microsoft.Extensions.Logging.AzureAppServices</code></li>
+<li>Searched for hours. Saw something about VSCode remote debugger - sounds useful, since deployments are slow and we need the DB on cloud.</li>
+<li>Tried <code>System.Diagnostics.Trace.TraceError(&quot;If you're seeing this, something bad happened&quot;)</code> from https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs - didn't help.</li>
+</ul>
+<h4 id="appmapget-works"><strong><code>app.MapGet</code> works!</strong></h4>
+<ul>
+<li><code>app.MapGet(&quot;/status&quot;, () =&gt;&quot;Service is running!&quot;);</code> Yes yes yes. That works. Took a whole day!</li>
+<li>Fixed by clearing default providers, adding the Console provider and App-Service diagnostics provider:
+<img src="https://www.dropbox.com/scl/fi/3w5pppbryisbnnub0gvjv/code5.png?rlkey=yalncpk7vn53ozl7tdt03a8kg&st=d4a4b8mz&raw=1" alt="code5"></li>
+<li>Also using <code>app.Logger</code> instead of <code>LoggerFactory</code>. Adding <code>AddAzureWebAppDiagnostics()</code> pipes logs into Azure's Log Stream.
+Discovered possible useful aspects of the WebApp for later: Error Pages, App Service Editor, WebJobs
+<strong>DB connection</strong> failing - but logging now shows it. Might need to explicitly set Azure connection string.<br>
+Logs broke again after adding connection string. Switched to:
+<img src="https://www.dropbox.com/scl/fi/xo8sgt38hggznbp23r8t1/code6.png?rlkey=dmfla6gngg3bgrrvymru0b466&st=zwgrc32b&raw=1" alt="code6"></li>
+</ul>
+</blockquote>
+<blockquote>
+<h1 id="date-040425">Date 04/04/25</h1>
+<h2 id="logging-works-no-database-connection">Logging works, no Database connection:</h2>
+<p><img src="https://www.dropbox.com/scl/fi/sori7m15875tga7g3brcu/image7.png?rlkey=vurjlf3bwgysjmjzuesfgiydf&st=imf3qeav&raw=1" alt="img7"><br>
+CloudSAc3a0ae0e was auto-generated — turns out it's the <strong>master DB login.</strong></p>
+<ul>
+<li>Found a section in the DB showing the exact connection string format by auth-type. Super helpful. Also realized I could test the <strong>username/password</strong> combo using <strong>Query Editor (SQL login on the left, not Entra on the right).</strong></li>
+<li>Didn't know the master password — found it in the <strong>Overview</strong> tab.</li>
+<li><strong>Confirmed:</strong> <code>LyricalUser</code> is now set up for SQL auth!</li>
+<li><strong>Issue was Environment Variables!</strong>
+Code had the right connection string, but Azure was using the <strong>WebApp Settings</strong> one, which overrode it. I am happy to log it is now working and connected.<br>
+<img src="https://www.dropbox.com/scl/fi/d36qo8dfzfbk8v1g6akqa/image8.png?rlkey=i74vgiri61upy0vt5ox5m0dv9&st=861e7ur8&raw=1" alt="img8"></li>
+</ul>
+<p>Good. We don't need this in app.settings then:
+<img src="https://www.dropbox.com/scl/fi/ry9z5vjhesf327cuonynf/code7.png?rlkey=p4jmjwaxmfq66zz1eb1zdpmrb&st=y0jm3fmf&raw=1" alt="code7"></p>
+<h2 id="setting-up-the-database">Setting up the Database</h2>
+<p>I granted permissions to LyricalUser and made a quick table! Very Happy.<br>
+<img src="https://www.dropbox.com/scl/fi/jdcwcg4r77w9m3tnjnrdx/image9.png?rlkey=a1vj2ogl1u4bx5qcejpybtdbq&st=7o77mli6&raw=1" alt="img9">
+<strong>Injection:</strong> We may need to stop injection attacks if we are using simple account username/password ~ may not be needed.<br>
+<img src="https://www.dropbox.com/scl/fi/b8udfmiasqtmkq1fke7b1/image10.png?rlkey=uz2j4twf9fi27f2f2goqvaezz&st=7afdvf36&raw=1" alt="img10"></p>
+<p>TRUNCATE TABLE table_name is one way to reset identity id count, but it does also delete everything, another way would be to add a new_id column then delete the old one and rename the new one.</p>
+<p><img src="https://www.dropbox.com/scl/fi/8k29kbfjifb9w22dm3qak/image11.png?rlkey=l9nqjw42l83fmo8txfy6iy1ld&st=xwejpjh1&raw=1" alt="img11"></p>
+<p><strong>System Idea 1 set up:</strong> <code>Words</code>, <code>Sentences</code>, and a linking <code>sentence_word</code> table.<br>
+<code>song → paragraph (group_id) → sentence (id and position) → words (id and position)</code><br>
+Sentences + words stored once each - keeps things clean. <code>sentence_word</code> turns a song into an ordered ID map. Feels very systematic.
+Translation-ready: <code>English</code>, <code>Russian</code>, <code>Deutsch</code>, <code>Español</code>, <code>Français</code>. Reuben can add more if needed - columns are extendable.<br>
+Designed with Reuben's flow in mind - checks if sentence/word exists. If not, adds it + links by ID. Since there's no deletion, IDs can just be max+1 - or if needed, remove IDENTITY column and set manually (though that logic must be watertight).<br>
+Really solid DB design exercise. Rewarding. Feel like my <strong>relational DB intuition</strong> is a lot sharper now.</p>
+<p>And I think now the next main phase of the project will be writing a load of C#/SQL, slightly more Reuben's part.
+After that we can start mock testing and after I want to try set up simple Data Anlysis.</p>
+</blockquote>
+<blockquote>
+<h1 id="date-110425">Date 11/04/25</h1>
+<p>Have collaborated on how the DataBase works so that the code can be written accordingly. Realised that if we stick the Connection String back into appsettings.json then we don't need to redeploy the app every time!<br>
+FYI: using mock-song https://lyricstranslate.com/en/pod-rakitoju-zelenoj-%D0%BF%D0%BE%D0%B4-%D1%80%D0%B0%D0%BA%D0%B8%D1%82%D0%BE%D1%8E-%D0%B7%D0%B5%D0%BB%D1%91%D0%BD%D0%BE%D0%B9-under-green-willow.html</p>
+</blockquote>
+<blockquote>
+<h1 id="date-29-300425">Date 29-30/04/25</h1>
+<ul>
+<li>Set up the user interactions: reconfigured the C# endpoints so that the logic would hold for multiple requests. Had the reply system set up.</li>
+<li>Set up user interaction answers (right or wrong).</li>
+<li>Chatbot inspiration: https://codepel.com/html-css/chat-box-html-code-for-website/</li>
+<li>Manually added all <code>words</code>, <code>sentences</code>, and <code>connections</code> for the mock-song - for checking the search system.</li>
+<li>Learned a ton of SQL in the process - especially splitting lyrics into cleaned words and auto-inserting!! Stuff I hadn't come across before.</li>
+<li>Tried connecting via Python using DeepSearch API, but long-term we'll want an <strong>Azure-based translator</strong> anyway.</li>
+<li>Right now, not worth the time - better to do it properly when we're ready.</li>
+</ul>
+<p><img src="https://www.dropbox.com/scl/fi/ydzs5omfmb3nrgsxrt01k/code8.png?rlkey=uxj7xcsz6agxpv1zb6eheal2r&st=8uld67j5&raw=1" alt="code8"></p>
+<p>Tried something clever to fill out <code>sentence_words</code> automatically but despite new SQL-knowledge it didn't work and I had to do it manually:<br>
+<img src="https://www.dropbox.com/scl/fi/i8fpnaeoz2tq3t3kpp0rr/image12.png?rlkey=kvm4pfq8n1gr4yife95jxq4aa&st=jag80nms&raw=1" alt="img12">
+<img src="https://www.dropbox.com/scl/fi/gr3o6wxdmkwf0zo8fdff8/code9.png?rlkey=7u5fwkir5xs3tcyhkcycqetc6&st=0902o2rq&raw=1" alt="code9"></p>
+<p>Also added an <code>Og</code> column for the song's orginal lyrics in whatever language, serving as the original lyrics which can be translated into whatever choice desired.<br>
+Here I better understood defining the table column definitions in C#; though I would like more practice in future.</p>
+<ul>
+<li><strong>Bought domain on Namecheap</strong> - Purchased a .com on Namecheap, configured CNAME and TXT records to point to our Azure App Service - DNS propagation took ~30 min (Durham WiFi blocks it! DB/server slow wake up).</li>
+<li>Added a <strong>CNAME</strong>: <code>Host: </code>, <code>Value: [azure app domain]</code>, <code>TTL: 30 min</code> for global propagation.
+<img src="https://www.dropbox.com/scl/fi/u5b9q1ywpux66x3x1tqrz/image13.png?rlkey=gymctox3m53gucoi95q9c42dq&st=b5mhoon5&raw=1" alt="img13"></li>
+</ul>
+<p>So need to warn anyone attempting to try it.<br>
+Useful DNS checking: https://www.whatsmydns.net/#CNAME/</p>
+</blockquote>
+
+</body>
+</html>

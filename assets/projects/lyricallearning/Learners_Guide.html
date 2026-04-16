@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learners_Guide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<base target="_blank">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+}
+
+h2 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="learners-guide-for-an-azure-c-web-app">Learner's Guide for an Azure C# Web App</h1>
+<p>Welcome! This guide is for anyone eager to build and deploy a fully functional Azure C# web application.</p>
+<p>Warning: Any links are sandboxed, you must CTRL + 'click' in order to open any links.</p>
+<h2 id="motivation">Motivation</h2>
+<p><strong>Why learn this?</strong></p>
+<p>We've launched a live Azure C# web app! Now anyone - except those on restrictive university Wi-Fi - can visit <code>www.lyricallanguagelearning.com</code> and use our platform. This transforms your project from a solo exercise into a real-world tool that helps others learn languages, though this can just be the framework, a basic skeleton for any app!</p>
+<ul>
+<li><strong>Real impact:</strong> Your work becomes a publicly accessible service, not just a code sample.</li>
+<li><strong>Skill building:</strong> You'll map out relational database design on a manageable scale before tackling larger corporate systems.</li>
+<li><strong>Industry insight:</strong> Gain intuition for Agile workflows, microservices architecture, and continuous deployment - core practices in modern development.</li>
+<li><strong>End-to-end understanding:</strong> Purchase and configure a custom domain, link resources, manage DNS, and secure your site with SSL.</li>
+<li><strong>Career value:</strong> These skills are directly transferable to professional roles and could even enable you to monetize your apps.</li>
+</ul>
+<p>In short, this journey equips you with the practical know-how to take ideas from local development all the way to a live, scalable, and secure web application on Azure. Happy coding!</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before diving in, you should be comfortable with:</p>
+<ul>
+<li><strong>C# and .NET Fundamentals</strong>: Understand basic syntax, object-oriented concepts, and the .NET CLI.
+<ul>
+<li><em>Learn:</em> <a href="https://learn.microsoft.com/dotnet/csharp/tour-of-csharp/">C# Tutorial</a>, <a href="https://learn.microsoft.com/dotnet/core/tools/">Get started with .NET CLI</a></li>
+</ul>
+</li>
+<li><strong>Web Development Basics</strong>: Familiarity with HTTP, RESTful APIs, and ASP.NET Core MVC or Minimal APIs.
+<ul>
+<li><em>Learn:</em> <a href="https://learn.microsoft.com/aspnet/core/tutorials/">ASP.NET Core Tutorial</a></li>
+</ul>
+</li>
+<li><strong>Relational Databases and SQL</strong>: Know how to design tables, write CRUD queries, and use migrations.
+<ul>
+<li><em>Personal Favourite</em>: <a href="https://www.w3schools.com/sql/">W3Schools SQL</a></li>
+<li><em>Learn (others):</em> <a href="https://learn.microsoft.com/sql/tutorials/">SQL Basics</a>, <a href="https://learn.microsoft.com/ef/core/">Entity Framework Core</a></li>
+</ul>
+</li>
+<li><strong>Version Control with Git</strong>: Basic commands for committing, branching, and merging in GitHub.
+<ul>
+<li><em>Learn:</em> <a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">Git Basics</a></li>
+</ul>
+</li>
+<li><strong>Azure Fundamentals</strong>: Core Azure concepts like Resource Groups, App Service, and Azure SQL.
+<ul>
+<li><em>Learn:</em> <a href="https://learn.microsoft.com/training/paths/azure-fundamentals/">Azure Fundamentals</a></li>
+</ul>
+</li>
+<li><strong>DNS and Domain Management</strong>: Understanding of CNAME, TXT records, and TTL values.
+<ul>
+<li><em>Learn:</em> <a href="https://learn.microsoft.com/azure/dns/dns-overview">DNS Concepts</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="who-this-guide-is-for">Who This Guide Is For</h3>
+<ul>
+<li><strong>Aspiring Full-Stack Developers</strong> looking to add cloud deployment to your skill set.</li>
+<li><strong>C#/.NET Developers</strong> who want to transition projects from local to Azure.</li>
+<li><strong>Students &amp; Learners</strong> seeking a hands-on, end-to-end deployment experience.</li>
+<li><strong>Professionals</strong> aiming to understand real-world setup of domains, SSL, and CI/CD pipelines.</li>
+</ul>
+<p>With these foundations in place, you'll be ready to follow along and build your first Azure-hosted C# web application!</p>
+<h2 id="mastery-roadmap">Mastery Roadmap</h2>
+<p>Follow this high-level process to master Azure C# web app deployment:</p>
+<ol>
+<li>
+<p><strong>Set Up Your Environment</strong></p>
+<ul>
+<li>Install .NET 6+ SDK, your IDE (VS 2022/VS Code) and Azure CLI.</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/dotnet/core/tools/">.NET CLI Quickstart</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Build a Local C# Web App</strong></p>
+<ul>
+<li><strong>Project scaffolding</strong>: Scaffold an API or MVC app (dotnet new), connect to your DB via appsettings.json, and debug locally with dotnet watch run.</li>
+<li><strong>Run and debug locally</strong>; verify endpoints with Logstream <code>app.MapGet('Message')</code> if deploying or my strongly advised method of using connection strings in <code>appsettings.json</code> to link to the database and deploy locally using <code>dotnet build</code>, <code>dotnet watch run</code>.  Vital!!! - Go to <code>SQL-DB/Settings/Connection_Strings</code> and it will be easy to know the format you need.</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/aspnet/core/tutorials/">ASP.NET Core Tutorials</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Use Entity Framework Core</strong></p>
+<ul>
+<li>Add EF Core, define your <code>DbContext</code> and entities, then scaffold/update via migrations.
+<ul>
+<li><strong>Migrations</strong>: Use <code>dotnet ef migrations add InitialCreate</code> and <code>dotnet ef database update</code> to set up your schema.</li>
+<li><strong>Query data</strong>: Learn to query data using EF Core as this makes the process automatable and procedural - something I wish I had used more!</li>
+</ul>
+</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/ef/core/">EF Core Documentation</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Version Control &amp; Workflow</strong></p>
+<ul>
+<li>Use Git with feature branches, pull requests, and a Kanbn board to track work.
+<ul>
+<li><strong>Task management</strong>: Implement a Kanbn board (GitHub Projects or Trello) to track user stories, bugs, and tasks ~ this requires a simple installation of the extension.</li>
+</ul>
+</li>
+<li><em>Resource:</em> <a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">Git Basics</a>, <a href="https://www.atlassian.com/agile/kanban/kanban-vs-scrum">Kanbn vs Scrum</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy to Azure</strong></p>
+<ul>
+<li>Provision Azure SQL (portal-or-REST), set firewall rules for your dev IP and App Service, and store your connection string in App Settings.
+<ul>
+<li><strong>Verify</strong> your app's public endpoint and view logs in the portal.</li>
+</ul>
+</li>
+<li><em>Resource:</em> <a href="https://portal.azure.com/?quickstart=true#view/Microsoft_Azure_Resources/ServicePage.ReactView/id/WebApp">Azure App Service Quickstart</a>,<a href="https://www.youtube.com/watch?v=hrLqs-Pt9AA&amp;list=PLI7iePan8aH45SW7KxWS9G5FO4Rh17_P9">Everything Azure</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Azure SQL</strong></p>
+<ul>
+<li><strong><a href="https://learn.microsoft.com/en-us/rest/api/sql/rest-api-sql-create-or-update-database">Create an Azure SQL Database</a></strong> through the portal or REST-API.</li>
+<li><strong>CD:</strong> Azure's continuous deployment can be enabled with a single click once your GitHub repository is linked - automating every push - though you'll still need to implement robust testing not covered in this guide.</li>
+<li><strong>Set firewall rules</strong> to allow your IP('s) and the App Service inbound traffic (later it is easy enough to add you current IP under <strong>Networking</strong> in your app).</li>
+<li><strong>Connection strings</strong>: Store securely in App Service settings (don't need to hardcode in code unless in development).</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/rest/api/sql/rest-api-sql-create-or-update-database">Create Azure SQL via REST API</a></li>
+<li><em>Optional Manual Creation Resource:</em> <a href="https://learn.microsoft.com/azure/app-service/deploy-continuous-deployment?tabs=github%2Cgithubactions#configure-the-deployment-source">CI/CD for Azure App Service</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Enable Logging &amp; Diagnostics</strong></p>
+<ul>
+<li><strong>Configure application logging</strong> in <code>Program.cs</code> with <code>builder.Logging.AddAzureWebAppDiagnostics()</code>.</li>
+<li><strong>Set up Stream logs</strong> in the portal's Log Stream - this step is optional for basic setups / simple development but may be invaluable as your project grows.</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/azure/app-service/troubleshoot-diagnostic-logs">App Service Diagnostic Logs</a>, <a href="https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs">Enable diagnostic logging for apps in Azure App Service</a> ~ the latter was useful in understanding everything but not neccessarily making it work.</li>
+</ul>
+</li>
+<li>
+<p><strong>DNS &amp; Custom Domain</strong></p>
+<ul>
+<li>Upgrade to <code>B1</code> under <strong>App Service Plan</strong>., point your custom domain via <code>CNAME/TXT</code> and bind an App Service Managed Certificate.</li>
+<li><strong>Purchase a domain</strong> and configure DNS records (CNAME for <code>www</code>, TXT for verification). We used <a href="www.namecheap.com">namecheap</a>, but others like <a href="www.GoDaddy.com">GoDaddy</a>, also under custom domain in your Azure App for $11.99 at time of writing.</li>
+<li><strong>Add custom domain</strong> in App Service <strong>Settings/Custom_Domains</strong> or <strong>Overview</strong> and validate with the TXT record.</li>
+<li><strong>SSL/TLS binding</strong>: Use SNI SSL with a free App Service Managed Certificate.</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/azure/dns/dns-overview">DNS Overview</a>, <a href="https://www.whatsmydns.net/#A/www.lyricallanguagelearning.com">WhatsMyDNS</a> ~ Very, very useful for checking if the DNS is working / status!!!</li>
+</ul>
+</li>
+<li>
+<p><strong>Add Advanced Features</strong><br>
+Some things for any coders willing to take this further / look into more detailed aspects. These are part of our current/future plans.</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>Integrate Azure Cognitive Services</strong> (Translator, Speech) for multilingual functionality.</p>
+</li>
+<li>
+<p><strong>Test with mock data</strong>: use the provided lyrics sample to validate translation and search features.</p>
+</li>
+<li>
+<p><strong>Implement a simple JS chat interface</strong></p>
+</li>
+<li>
+<p><em>Resource:</em> <a href="https://learn.microsoft.com/azure/cognitive-services/translator/">Azure Translator</a></p>
+</li>
+<li>
+<p><em>Inspiration:</em> <a href="https://codepel.com/html-css/chat-box-html-code-for-website/">HTML/CSS Chat Box</a></p>
+</li>
+<li>
+<p><strong>Scale &amp; Optimize</strong></p>
+<ul>
+<li><strong>Performance tuning</strong>: use Application Insights to monitor telemetry and identify bottlenecks.</li>
+<li><strong>Microservices</strong>: further explore Azure Functions or containerized services if needed.</li>
+<li><strong>Cost management</strong>: set budgets and alerts in Azure Cost Management.</li>
+<li><em>Resource:</em> <a href="https://learn.microsoft.com/azure/architecture/">Azure Architecture Center</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="some-further-learning-resources">Some further learning resources</h2>
+<p>Mock Lyrics: <a href="https://lyricstranslate.com/en/pod-rakitoju-zelenoj-%D0%BF%D0%BE%D0%B4-%D1%80%D0%B0%D0%BA%D0%B8%D1%82%D0%BE%D1%8E-%D0%B7%D0%B5%D0%BB%D1%91%D0%BD%D0%BE%D0%B9-under-green-willow.html">Under a Green Willow</a>, <a href="https://www.justsomelyrics.com/1304146/anne-grete-preus-n%C3%A5r-himmelen-faller-ned-lyrics.html">When the Sky Falls</a></p>
+<p><img src="https://www.dropbox.com/scl/fi/217mcytzcemlr7kkg6225/image1.png?rlkey=0d7kdxfkwpb1yx9ayadniztk8&st=6xhb6g2m&raw=1" alt="img1" style="width: 50%">
+<img src="https://www.dropbox.com/scl/fi/g3hk8jbf972texydrqeyd/image3.png?rlkey=20vke3ohh9d2j8ryncyquk6yf&st=of6vzlui&raw=1" alt="img3" style="height: 80%"></p>
+<h2 id="evaluation">Evaluation</h2>
+<p><strong>How useful is the skill, compared with the effort of learning it? What similar alternatives are there?</strong></p>
+<p>Overall, this project has been a hugely informative experience packed with new knowledge and practical skills. Working in .NET and Azure sharpened my understanding of end-to-end full-stack development, but along the way I learned plenty about process too.</p>
+<ul>
+<li>Outsource front-end? Could have saved hours by looping in a React or Angular specialist, or even using a low-code front-end tool. Shifting UI work off my plate would let me focus on API and DB logic without constant context-switching.</li>
+<li>Possibly could have used something other than .NET as editing the code was, to start with, very confusing and intangled with other aspects though once you get used to it you come to like the clean separation of files for different aspects of different pages.</li>
+<li>Local vs cloud testing: Five-minute Azure redeployments for each logging tweak cost me nearly an entire day! Running local emulators (Azurite, SQL Server Docker) and toggling connection strings dynamically would avoid long waits and speed up debugging. I think that lost me a whole day and a lot of frustation.</li>
+<li>We weren't sure if we would have time to buy a domain but ultimalely - plan your tier: Free tiers are tempting, but starting on a B1 App Service plan would enable managed identities, Entra Authentication, a smoother security setup and no trouble with connection strings though <strong>now</strong> I've come to think they're quite clean but that's only when you know the correct format etc. <code>SQL-DB/Settings/Connection_Strings</code> → easy!!!!
+<ul>
+<li>Security best practices: While SQL auth worked, using managed identities and Azure Key Vault for secrets is the industry standard. Investing time in secure secret storage upfront reduces later compliance headaches.</li>
+</ul>
+</li>
+<li>Automate DB seeds: Designing a clean lyrics/translation schema sharpened my relational intuition, but manually putting the data in was tedious. Next time, I'd definitely use the EF Core migrations to automate table creation and initial data loads.</li>
+</ul>
+<p>All said, the effort was worth it! These skills are broadly relevant and have given a solid base of understanding for the creative part of my future system design career aspirations.</p>
+
+</body>
+</html>
