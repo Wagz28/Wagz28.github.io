@@ -19,7 +19,8 @@ Broken from illusion, broken from a spell,
 Look around to see the millennia who have surely fell.
 It should not have been taken, it was not theirs to sell.
 
-When shall this be fear...Judgement day comes at the sound of a bell.
+When shall this be fear...
+Judgement day comes at the sound of a bell.
 A beautiful creation, a place for one to truly be.
 A web to express creativity & one's own identity.
 
