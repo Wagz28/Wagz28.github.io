@@ -31,10 +31,10 @@ cast upon some lost dime;
 Spent in waste and with something of distaste
 I crave to find words but language is a world of waste
 
-See it there lying on the stair...
+See it there lying on the stair[...](https://benwagstaff.com/poetry/web/)
 Happy are you hun',
-When is it your happiness begun?
-Old tales, but new rails warn me it is not so
+When is it your happiness begun[?](https://benwagstaff.com/poetry/boredom/)
+Old tales, but new [rails](https://benwagstaff.com/poetry/what-is-not) warn me it is not so
 Yet when indeed for what it is I no further know
 I live and laugh, I pray and thrive
 In His blood - my bath, in His cross - _wonderfully alive_
