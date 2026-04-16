@@ -408,7 +408,7 @@ code {
 <li>Made a resource group, not a high level project so no tagging needed.</li>
 </ul>
 <p>Very simple; Search for &quot;Resource Groups&quot; on Azure Portal, Click Create, Name it, Pick a Region, Click Review+Create.
-<img src="https://www.dropbox.com/scl/fi/koi6up8q9qu1k0x960c0f/image2.png?rlkey=1z3ei9ye4cck71zkpiptxobhf&st=6138auot&raw=1" alt="img2">\</p>
+<img src="https://www.dropbox.com/scl/fi/koi6up8q9qu1k0x960c0f/image2.png?rlkey=1z3ei9ye4cck71zkpiptxobhf&st=6138auot&raw=1" alt="img2"></p>
 <p>Created Resource Group, assigned Reuben Contributor via IAM, spun up Azure SQL (Free Tier), and later added our custom domain via CNAME/TXT verification.</p>
 <p>Provisioned a single Azure SQL Free-Tier database (10 DBs, 100K vCore-seconds, 32 GB data + backup) inside our Resource Group; created a new server using Microsoft Entra-only authentication (not supported on Free Tier), enabled public access and allowed Azure services, whitelisted our dev IP, skipped ledger diagnostics, noted the future need for a managed identity, and set the collation to Latin1_General_100_CI_AS_SC_UTF8 for broad character support (lots of languages).
 Note: 5.50$ per-month after the free trial.
