@@ -300,12 +300,12 @@ Merged everything previous and hopefully it is now connected to the DB. CI worki
 Not working! Alter roles?<br>
 <img src="https://www.dropbox.com/scl/fi/4f13d3rlhb17bcfgydv9x/image6.png?rlkey=kqv5prao3ikkrzq6b4rtjzy80&st=23nikwah&raw=1" alt="img6"><br>
 Free Plan does not include Managed Identity: need to switch to SQL authentication!!!
-<img src="https://www.dropbox.com/scl/fi/3zdfz0b6ep6kl4fp0fho8/code2.png?rlkey=ze501e4rwyzpekmxxkmjy16pe&st=37vpoyky&raw=1" alt="code2">
+<img src="https://www.dropbox.com/scl/fi/3zdfz0b6ep6kl4fp0fho8/code2.png?rlkey=ze501e4rwyzpekmxxkmjy16pe&st=37vpoyky&raw=1" style="width:50%;" alt="code2">
 cmd: <code>dotnet remove package Azure.Identity</code>, <code>dotnet clean</code>, <code>dotnet build</code><br>
 Removed identity use in Program.cs and appsettings.json:
 <img src="https://www.dropbox.com/scl/fi/l1bi3digoglf8n5r3sosh/code3.png?rlkey=g5qqb3s1s0hzc0ofvkglvp3di&st=g2zxxcp5&raw=1" alt="code3">
 Checking LyricalUser in the DB:
-<img src="https://www.dropbox.com/scl/fi/t0cfpo48irpl50n69umvj/code4.png?rlkey=ecfwyyu2oah2qlvmc6527qi31&st=ibb2o2bv&raw=1" alt="code4"></p>
+<img src="https://www.dropbox.com/scl/fi/t0cfpo48irpl50n69umvj/code4.png?rlkey=ecfwyyu2oah2qlvmc6527qi31&st=ibb2o2bv&raw=1" style="width:50%;" alt="code4"></p>
 <h2 id="logging">Logging:</h2>
 <p><strong>Program.cs Logging not working?!</strong></p>
 <ul>
@@ -318,7 +318,7 @@ Checking LyricalUser in the DB:
 <ul>
 <li><code>app.MapGet(&quot;/status&quot;, () =&gt;&quot;Service is running!&quot;);</code> Yes yes yes. That works. Took a whole day!</li>
 <li>Fixed by clearing default providers, adding the Console provider and App-Service diagnostics provider:
-<img src="https://www.dropbox.com/scl/fi/3w5pppbryisbnnub0gvjv/code5.png?rlkey=yalncpk7vn53ozl7tdt03a8kg&st=d4a4b8mz&raw=1" alt="code5"></li>
+<img src="https://www.dropbox.com/scl/fi/3w5pppbryisbnnub0gvjv/code5.png?rlkey=yalncpk7vn53ozl7tdt03a8kg&st=d4a4b8mz&raw=1" style="width:50%;" alt="code5"></li>
 <li>Also using <code>app.Logger</code> instead of <code>LoggerFactory</code>. Adding <code>AddAzureWebAppDiagnostics()</code> pipes logs into Azure's Log Stream.
 Discovered possible useful aspects of the WebApp for later: Error Pages, App Service Editor, WebJobs
 <strong>DB connection</strong> failing - but logging now shows it. Might need to explicitly set Azure connection string.<br>
@@ -343,9 +343,9 @@ Code had the right connection string, but Azure was using the <strong>WebApp Set
 <img src="https://www.dropbox.com/scl/fi/ry9z5vjhesf327cuonynf/code7.png?rlkey=p4jmjwaxmfq66zz1eb1zdpmrb&st=y0jm3fmf&raw=1" alt="code7"></p>
 <h2 id="setting-up-the-database">Setting up the Database</h2>
 <p>I granted permissions to LyricalUser and made a quick table! Very Happy.<br>
-<img src="https://www.dropbox.com/scl/fi/jdcwcg4r77w9m3tnjnrdx/image9.png?rlkey=a1vj2ogl1u4bx5qcejpybtdbq&st=7o77mli6&raw=1" alt="img9">
+<img src="https://www.dropbox.com/scl/fi/jdcwcg4r77w9m3tnjnrdx/image9.png?rlkey=a1vj2ogl1u4bx5qcejpybtdbq&st=7o77mli6&raw=1" style="width:50%;" alt="img9">
 <strong>Injection:</strong> We may need to stop injection attacks if we are using simple account username/password ~ may not be needed.<br>
-<img src="https://www.dropbox.com/scl/fi/b8udfmiasqtmkq1fke7b1/image10.png?rlkey=uz2j4twf9fi27f2f2goqvaezz&st=7afdvf36&raw=1" alt="img10"></p>
+<img src="https://www.dropbox.com/scl/fi/b8udfmiasqtmkq1fke7b1/image10.png?rlkey=uz2j4twf9fi27f2f2goqvaezz&st=7afdvf36&raw=1" style="width:50%;" alt="img10"></p>
 <p>TRUNCATE TABLE table_name is one way to reset identity id count, but it does also delete everything, another way would be to add a new_id column then delete the old one and rename the new one.</p>
 <p><img src="https://www.dropbox.com/scl/fi/8k29kbfjifb9w22dm3qak/image11.png?rlkey=l9nqjw42l83fmo8txfy6iy1ld&st=xwejpjh1&raw=1" alt="img11"></p>
 <p><strong>System Idea 1 set up:</strong> <code>Words</code>, <code>Sentences</code>, and a linking <code>sentence_word</code> table.<br>
@@ -373,7 +373,7 @@ FYI: using mock-song https://lyricstranslate.com/en/pod-rakitoju-zelenoj-%D0%BF%
 <li>Tried connecting via Python using DeepSearch API, but long-term we'll want an <strong>Azure-based translator</strong> anyway.</li>
 <li>Right now, not worth the time - better to do it properly when we're ready.</li>
 </ul>
-<p><img src="https://www.dropbox.com/scl/fi/ydzs5omfmb3nrgsxrt01k/code8.png?rlkey=uxj7xcsz6agxpv1zb6eheal2r&st=8uld67j5&raw=1" alt="code8"></p>
+<p><img src="https://www.dropbox.com/scl/fi/ydzs5omfmb3nrgsxrt01k/code8.png?rlkey=uxj7xcsz6agxpv1zb6eheal2r&st=8uld67j5&raw=1" style="width:50%;" alt="code8"></p>
 <p>Tried something clever to fill out <code>sentence_words</code> automatically but despite new SQL-knowledge it didn't work and I had to do it manually:<br>
 <img src="https://www.dropbox.com/scl/fi/i8fpnaeoz2tq3t3kpp0rr/image12.png?rlkey=kvm4pfq8n1gr4yife95jxq4aa&st=jag80nms&raw=1" alt="img12">
 <img src="https://www.dropbox.com/scl/fi/gr3o6wxdmkwf0zo8fdff8/code9.png?rlkey=7u5fwkir5xs3tcyhkcycqetc6&st=0902o2rq&raw=1" alt="code9"></p>
@@ -382,7 +382,7 @@ Here I better understood defining the table column definitions in C#; though I w
 <ul>
 <li><strong>Bought domain on Namecheap</strong> - Purchased a .com on Namecheap, configured CNAME and TXT records to point to our Azure App Service - DNS propagation took ~30 min (Durham WiFi blocks it! DB/server slow wake up).</li>
 <li>Added a <strong>CNAME</strong>: <code>Host: </code>, <code>Value: [azure app domain]</code>, <code>TTL: 30 min</code> for global propagation.
-<img src="https://www.dropbox.com/scl/fi/u5b9q1ywpux66x3x1tqrz/image13.png?rlkey=gymctox3m53gucoi95q9c42dq&st=b5mhoon5&raw=1" alt="img13"></li>
+<img src="https://www.dropbox.com/scl/fi/u5b9q1ywpux66x3x1tqrz/image13.png?rlkey=gymctox3m53gucoi95q9c42dq&st=b5mhoon5&raw=1" style="width:50%;" alt="img13"></li>
 </ul>
 <p>So need to warn anyone attempting to try it.<br>
 Useful DNS checking: https://www.whatsmydns.net/#CNAME/</p>
