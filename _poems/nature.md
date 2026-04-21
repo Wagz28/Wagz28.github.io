@@ -11,7 +11,7 @@ Physically feel Life's energy
 And let your heart be free...
 
 Let its power overcome you,
-Let is hold you tight.
+Let it hold you tight.
 Be still
 Be quiet
 You will be a light
