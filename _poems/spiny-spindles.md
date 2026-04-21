@@ -8,7 +8,8 @@ tags: [depression, observing]
 Spiny Spindles in the dark, what the hour,
 Come ... see me now don't Hark.
 Blue of the oceans, blue from the land.
-Black lightning lines the woods no deeper, but not bland
+Black lightning lines the woods no deeper,
+but not bland
 Listen close, listen hard
 Decipher codes written within a card...
 A card to make wonder
