@@ -8,7 +8,7 @@ tags: [meditation, stillness, peace]
 Listen
 See
 Physically feel Life's energy
-And let your hear be free...
+And let your heart be free...
 
 Let its power overcome you,
 Let is hold you tight.
