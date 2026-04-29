@@ -1,6 +1,6 @@
 ---
 title: "My route to Praise"
-date: 2024-04-29
+date: 2026-04-29
 summary: "Each to their own route in God's will"
 tags: [christian, joy]
 ---
