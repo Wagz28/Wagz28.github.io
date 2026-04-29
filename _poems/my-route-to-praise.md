@@ -9,43 +9,43 @@ As the wedding bells ring
 A distant & future memory
 As the chorus of living
 break against the turf
-    My praises rise also
-    A precious ceremony
+    &emsp; My praises rise also
+    &emsp; A precious ceremony
 
 As dancing gold
 Lifts up & comforts what is battered & gnarled
 As a family of ducklings struggle across
 Sweeping currents of fate far from calm
-    My praises rise also
-    In gracious & sweetest memory
+    &emsp; My praises rise also
+    &emsp; In gracious & sweetest memory
 
 As I pull my gaze
 From others' paths intertwined in Grace
 As a leaf in the breeze
 Trusts in the roots that run deep
-     My praises rise also
-     In letting go from saving face
+     &emsp; My praises rise also
+     &emsp; In letting go from saving face
 
 As your masterpiece is made
 A flowing canvas of Grace
 As rising tide
 Sweeping the world ablaze
-    My praises rise again
-    A delight of true life
+    &emsp; My praises rise again
+    &emsp; A delight of true life
 
 As straps which cut deep
 Are left willingly at Your feet
 As realms which piroutte
 Their expanses unseen which leak _that_ Eternity
-    My praise rises
-    O Lord, my songs desire's
+    &emsp; My praise rises
+    &emsp; O Lord, my songs desire's
 
 Serve the Lord with fear
 Rejoice with trembling
 Feel warmth when you turn facing
 Look up from the pit of cravings
-    Let praises rise
-    For Your Word is life
+    &emsp; Let praises rise
+    &emsp; For Your Word is life
 
 And so I remember
 My course is not my own
