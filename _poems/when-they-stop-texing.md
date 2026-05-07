@@ -32,7 +32,7 @@ Who knows he needs
 
 When they stop texting
 I forget.
-I forget to look up -
+I forget to look up —
 At the stars and the heavens
 And look! A shooting star! 
 And look, yet again another!
