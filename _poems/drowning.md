@@ -10,7 +10,7 @@ _Only let me see Your glory shine & shine_
 _That every knee will bow, even those who fade as i_
 _And every tongue **confess** to proclaim, that **Jesus** is **LORD** & **King**_
 
-Satan's circus - a colourful array, a lifetime [week of stay](benwagstaff.com/poetry/week-of-stay)
+Satan's circus - a colourful array, a lifetime [week of stay](https://benwagstaff.com/poetry/week-of-stay)
 A maze if you will; 
 	&emsp; extra points taking a pill
 The prize - god.

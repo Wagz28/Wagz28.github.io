@@ -12,7 +12,7 @@ And hear the building crumble around you
 And stare in the jaws of a hungry lion
 Or feel the heat of the furnace around you
 
-What does 'set apart' _feel_ like[.](benwagstaff.com/poetry/man-of-sorrow)
+What does 'set apart' _feel_ like[.](https://benwagstaff.com/poetry/man-of-sorrow)
 
 What if the world was set in embers,
 Yet you did not burn up;
