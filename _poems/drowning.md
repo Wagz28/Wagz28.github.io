@@ -25,7 +25,7 @@ Whenst once thy desperately lie,
 What an exuberant crown for the centre is 'to-die-for',
 ah! exquisite, truly what else is there to dine for.
 
-	&emsp; _A house of twisted mirrors_
+&emsp; _A house of twisted mirrors_
 "Strawberry cyanide Madam", a bowing servant reveres, 
 "_finest_ of our _newest_ batch!"
 Her royalty strides forward but — 
