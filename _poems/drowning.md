@@ -2,7 +2,7 @@
 title: "Drowning"
 date: 2026-05-06
 summary: "A puzzle, a drowning animal, certainly respectable. Only inspired. Inside-out commentary."
-tags: [christian, commentary, contemplation, tinted]
+tags: [christian, commentary, contemplation, tinted, riddle-like]
 ---
 
 _Glorify Your Name, let me fade as dust in wind_
