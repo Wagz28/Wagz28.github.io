@@ -2,7 +2,7 @@
 title: "Bely"
 date: 2026-05-23
 summary: "and look ... again the moon calls from me"
-tags: [playful, christian, ]
+tags: [playful, christian, dismay]
 ---
 
 
