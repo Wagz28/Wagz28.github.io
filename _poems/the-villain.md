@@ -27,7 +27,7 @@ under clean & fresh veil.
 Indeed the waters flow, for where else could they go?
 Once course is set, predestined it has been
 A logic gate to some, yet truth remains to be seen.
-Tarry a while and tell me so, but yet water goes on--
+Tarry a while and tell me so, but yet water goes on —
 Piercing shard of snows. It groans & breaks, 
 ring of roses as the old man's chapter closes.
 
