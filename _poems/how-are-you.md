@@ -25,11 +25,9 @@ Pose & look as the card takes what the world should've took,
 Clothe but not leave,
 Mutters & longs to be free,
 Trapped but not sad,
-Feels nothing but the breeze.
+Feels nothing but the breeze[.](https://www.benwagstaff.com/poetry/spiny-spindles/)
 
 All is calm, all is blue
 Still, a question is due...
 
 How are you?
-
-_Referencing_ [Spiny Spindles](https://www.benwagstaff.com/poetry/spiny-spindles/)
