@@ -32,4 +32,4 @@ Still, a question is due...
 
 How are you?
 
-_Referencing_ [Spiny Spindles](www.benwagstaff.com/s/poemLink/poetry/spiny-spindles/)
+_Referencing_ [Spiny Spindles](https://www.benwagstaff.com/poetry/spiny-spindles/)
