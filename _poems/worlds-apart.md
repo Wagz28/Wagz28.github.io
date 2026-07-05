@@ -6,7 +6,7 @@ tags: [christian, submission, pain, depleted, love]
 ---
 
 What does it feel like to be Samson
-What does it feel like to be David
+What does it feel like to be Daniel
 Or Shadrach, Meshach and Abednego
 And hear the building crumble around you
 And stare in the jaws of a hungry lion
