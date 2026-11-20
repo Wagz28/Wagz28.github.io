@@ -1,8 +1,8 @@
 ---
 title: "Tested"
 date: 2026-04-14
-summary: ""
-tags: []
+summary: "A true heart listens, longing to listen from above"
+tags: [tainted, love, pain, christian, submission]
 ---
 
 Am I being tried?
@@ -27,7 +27,7 @@ For the glory of His Name, for Love of His body
 Am I so deceived I cannot tell?
 Am I so far gone, I hear _not_ Your words _as well_?
 I know what the world says, yet I do not hear it from **You**.
-A true Heart listen, and lays down life in Love.
+A true Heart listens, and lays down life in Love.
 Lays down a heart in worship, longing to listen from above...
 
 The white rose stays, no matter what I do, but Jesus You, not I, _please_ ... choose.
