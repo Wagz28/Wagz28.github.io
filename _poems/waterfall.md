@@ -2,7 +2,7 @@
 title: "Waterfall"
 date: 2026-10-16
 summary: "roaring, soaring, the greatness of my Lord"
-tags: [glorify, greatness, death, riddle-like]
+tags: [glorify, greatness, death, riddle-like, christian]
 ---
 
 As the roaring of waterfalls
