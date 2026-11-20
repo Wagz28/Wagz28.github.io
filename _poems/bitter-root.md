@@ -1,8 +1,8 @@
 ---
 title: "Bitter root"
 date: 2026-11-20
-summary: ""
-tags: []
+summary: "what evil of night; blind, without sight, yet a plank in my own eye"
+tags: [soften, sickness, twisted, submission]
 ---
 
 Songs of sickness
