@@ -1,8 +1,8 @@
 ---
 title: "To speak as Tolkien wrote"
 date: 2026-09-29
-summary: ""
-tags: []
+summary: "march on, speech of old..."
+tags: [riddle-like, playful, wistful]
 ---
 
 To speak as Tolkien wrote
