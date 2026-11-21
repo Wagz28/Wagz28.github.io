@@ -609,6 +609,81 @@ button {
   font-size: 0.85rem;
 }
 
+/* Bible studies (long-form reading) */
+
+.study-body {
+  max-width: 680px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  overflow-wrap: break-word;
+}
+
+.study-body h2 {
+  margin: 2.8rem 0 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+}
+
+.study-body h3 {
+  margin: 2rem 0 0.6rem;
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.study-body p,
+.study-body ul,
+.study-body ol {
+  margin: 0 0 1.1rem;
+}
+
+.study-body li {
+  margin-bottom: 0.4rem;
+}
+
+.study-body a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.study-body blockquote {
+  margin: 1.4rem 0;
+  padding: 0.6rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-wash);
+  border-radius: 0 12px 12px 0;
+  color: var(--muted);
+}
+
+.study-body blockquote blockquote {
+  margin: 0.8rem 0;
+  background: var(--card);
+  border-left-color: var(--ring);
+}
+
+.study-body blockquote p {
+  margin: 0.4rem 0;
+}
+
+.study-body mark {
+  background: var(--accent-wash);
+  color: inherit;
+  padding: 0.05em 0.3em;
+  border-radius: 4px;
+}
+
+.study-body hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.4rem 0;
+}
+
+.study-body svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.6rem auto;
+}
+
 /* ----------------------------------- */
 
 /* Showcase section */
