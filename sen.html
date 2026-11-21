@@ -52,23 +52,43 @@
       <h2>The system</h2>
       <pre class="mermaid">
 flowchart TB
-  subgraph Clients
-    Site[Website / PWA]
-    App[Android app]
-    Fast[Voice client<br/>wake word + VAD]
-    Sessions[Claude sessions]
+  subgraph Devices["My devices"]
+    App["Android app<br/>Chat - Voice - Sessions"]
+    Site["Website / PWA<br/>Chat - Activity - Sessions"]
+    Mic["PC mic + speaker"]
   end
-  Core[(Core<br/>SQLite + HTTP API<br/>scopes - audit log)]
-  Slow[Sen brain<br/>local Qwen3-4B + tools<br/>Claude fallback]
-  Speech[Speech to text / Text to speech]
-  Site --> Core
-  App --> Site
-  Fast <--> Speech
-  Fast -- messages --> Slow
-  Slow -- replies via gate --> Fast
-  Slow --> Core
-  Slow -- starts / steers --> Sessions
-  Sessions --> Core
+  subgraph Fast["Fast path - no LLM"]
+    Reflex["Voice host<br/>wake word - VAD<br/>stop / pause / modes"]
+    Gate{"Gate<br/>speak now? later? never?"}
+  end
+  subgraph Slow["Slow path"]
+    Brain["Sen brain<br/>local Qwen3-4B + tools"]
+    Claude["Claude<br/>fallback"]
+  end
+  Speech["Speech to text<br/>Text to speech"]
+  Core[("Core<br/>SQLite + HTTP API<br/>scopes - audit log")]
+  Sessions["Claude coding sessions"]
+  Phone(("Phone<br/>notifications"))
+
+  App -- "voice tab streams audio" --> Reflex
+  Mic -- "audio" --> Reflex
+  Reflex <-- "audio / text" --> Speech
+  Reflex -- "transcript" --> Brain
+  Brain -- "reply" --> Gate
+  Gate -- "speech" --> Reflex
+  Reflex -- "audio back" --> App
+  Reflex -- "audio back" --> Mic
+  App -- "same API as site" --> Site
+  Site -- "typed chat" --> Core
+  Core -- "unread chat" --> Brain
+  Brain -- "chat reply" --> Core
+  Brain -- "can't answer" --> Claude
+  Claude --> Brain
+  Brain -- "reminders, notes, work items" --> Core
+  Brain -- "start / steer" --> Sessions
+  Sessions -- "status, activity" --> Core
+  Core -- "sessions + activity" --> Site
+  Brain -- "alerts" --> Phone
       </pre>
       <p>
         Everything runs on my own machines, joined by a private encrypted network.
