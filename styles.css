@@ -719,17 +719,24 @@ button {
 .poem-search input{
   width: 100%;
   max-width: 420px;
-  padding: 12px 14px;
-  border: 1px solid #b8b8b8;
-  border-radius: 10px;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
   font: inherit;
-  background: #fff;
-  color: #222;
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
+.poem-search input:focus,
 .poem-search input:focus-visible{
-  outline: 2px solid #111;
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 .poem-search-empty{
