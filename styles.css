@@ -664,11 +664,17 @@ button {
   margin: 0.4rem 0;
 }
 
+/* Highlights: the orb's accent tint (rgba(45,58,140,.x)); !important beats the export's inline colours */
 .study-body mark {
-  background: var(--accent-wash);
-  color: inherit;
-  padding: 0.05em 0.3em;
+  background: rgba(45,58,140,.18) !important;
+  color: var(--ink);
+  padding: 0 0.25em;
   border-radius: 4px;
+}
+
+.study-body ::selection {
+  background: rgba(45,58,140,.18);
+  color: var(--ink);
 }
 
 .study-body hr {
@@ -682,6 +688,144 @@ button {
   max-width: 100%;
   height: auto;
   margin: 1.6rem auto;
+}
+
+/* Study callouts, cross-reference details, contents drawer (ported from the export) */
+
+.study-body h1,
+.study-body h2,
+.study-body h3 {
+  scroll-margin-top: 1em;
+}
+
+.study-body .co {
+  --c: #6b3a8a;
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--c);
+  border-radius: 0 12px 12px 0;
+  background: var(--card);
+  background: color-mix(in srgb, var(--c) 9%, transparent);
+  color: var(--ink);
+}
+
+.study-body .co .ct,
+.study-body .co summary {
+  margin: 0.2em 0;
+  font-weight: 700;
+  color: var(--c);
+}
+
+.study-body .co summary { cursor: pointer; }
+.study-body .co p { margin: 0.4em 0; }
+
+/* per-type hue: dark enough for text on the light tint */
+.study-body .co.note, .study-body .co.info, .study-body .co.todo { --c: #2a5aa0; }
+.study-body .co.abstract, .study-body .co.summary, .study-body .co.tldr { --c: #0b6a7a; }
+.study-body .co.tip, .study-body .co.hint, .study-body .co.important { --c: #0b6b5c; }
+.study-body .co.success, .study-body .co.check, .study-body .co.done { --c: #1f6b3a; }
+.study-body .co.question, .study-body .co.help, .study-body .co.faq,
+.study-body .co.warning, .study-body .co.caution, .study-body .co.attention { --c: #8a4b00; }
+.study-body .co.failure, .study-body .co.fail, .study-body .co.missing,
+.study-body .co.danger, .study-body .co.error, .study-body .co.bug { --c: #9b2c2c; }
+.study-body .co.example { --c: #5a3fb0; }
+.study-body .co.quote, .study-body .co.cite { --c: #555; }
+.study-body .co.bible { --c: #6b3a8a; }
+.study-body .co.theorem { --c: var(--accent); }
+
+.study-body .xr {
+  margin: 1.2rem 0;
+  padding: 0.3rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.study-body .xr > summary {
+  cursor: pointer;
+  padding: 0.3em 0;
+  font-size: 0.92em;
+  color: var(--muted);
+}
+
+.study-body .xr > summary:hover { color: var(--accent); }
+.study-body .xr[open] > summary { margin-bottom: 0.4em; }
+.study-body .xr.cons { border-color: var(--ring); background: var(--accent-wash); }
+
+.study-body .bar {
+  margin: 0.8rem 0;
+  padding: 0.2em 0 0.2em 0.6rem;
+  border-left: 3px solid var(--rule);
+}
+
+.study-body .ind {
+  margin: 0.15em 0;
+  color: var(--muted);
+}
+
+.study-body nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 240px;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1.2rem 1rem;
+  background: rgba(246,243,234,.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 1px solid var(--rule);
+  transform: translateX(100%);
+  transition: transform .25s ease;
+}
+
+.study-body nav.open { transform: none; }
+
+.study-body nav a {
+  display: block;
+  padding: 0.35em 0.6em;
+  border-radius: 6px;
+  font-size: 0.92em;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.study-body nav a:hover { background: var(--accent-wash); color: var(--accent); }
+.study-body nav a.l3 { padding-left: 1.6em; font-size: 0.85em; }
+
+.study-body .nh {
+  margin: 0 0.6em 0.6em;
+  font-size: 0.75em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.study-body .nb {
+  position: fixed;
+  right: 14px;
+  bottom: 18px;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 20px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+/* export used 1100px; the site column is 860px centred, so wait until the drawer fits beside it */
+@media (min-width: 1400px) {
+  .study-body nav { transform: none; }
+  .study-body .nb { display: none; }
 }
 
 /* ----------------------------------- */
