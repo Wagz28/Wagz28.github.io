@@ -51,50 +51,78 @@
     <section class="section">
       <h2>The system</h2>
       <pre class="mermaid">
-flowchart TB
-  subgraph Devices["My devices"]
-    App["Android app<br/>Chat - Voice - Sessions"]
-    Site["Website / PWA<br/>Chat - Activity - Sessions"]
-    Mic["PC mic + speaker"]
-  end
-  subgraph Fast["Fast path - no LLM"]
-    Reflex["Voice host<br/>wake word - VAD<br/>stop / pause / modes"]
-    Gate{"Gate<br/>speak now? later? never?"}
-  end
-  subgraph Slow["Slow path"]
-    Brain["Sen brain<br/>local Qwen3-4B + tools"]
-    Claude["Claude<br/>fallback"]
-  end
-  Speech["Speech to text<br/>Text to speech"]
-  Core[("Core<br/>SQLite + HTTP API<br/>scopes - audit log")]
-  Sessions["Claude coding sessions"]
-  Phone(("Phone<br/>notifications"))
-
-  App -- "voice tab streams audio" --> Reflex
-  Mic -- "audio" --> Reflex
-  Reflex <-- "audio / text" --> Speech
-  Reflex -- "transcript" --> Brain
-  Brain -- "reply" --> Gate
-  Gate -- "speech" --> Reflex
-  Reflex -- "audio back" --> App
-  Reflex -- "audio back" --> Mic
-  App -- "same API as site" --> Site
-  Site -- "typed chat" --> Core
-  Core -- "unread chat" --> Brain
-  Brain -- "chat reply" --> Core
-  Brain -- "can't answer" --> Claude
-  Claude --> Brain
-  Brain -- "reminders, notes, work items" --> Core
-  Brain -- "start / steer" --> Sessions
-  Sessions -- "status, activity" --> Core
-  Core -- "sessions + activity" --> Site
-  Brain -- "alerts" --> Phone
+flowchart LR
+  Devices["My devices<br/>app - website - PC mic"]
+  Fast["Fast path<br/>voice + control"]
+  Brain["Sen brain<br/>local model"]
+  Core[("Core<br/>data + API")]
+  Sessions["Claude sessions"]
+  Devices <--> Fast
+  Fast <--> Brain
+  Devices <--> Core
+  Brain <--> Core
+  Brain --> Sessions
+  Sessions --> Core
       </pre>
       <p>
         Everything runs on my own machines, joined by a private encrypted network.
         Encryption and identity live at that bottom layer, so nothing above has to
-        reimplement them.
+        reimplement them. There are three routes through the system.
       </p>
+
+      <h3>Talking to Sen</h3>
+      <p>
+        The phone app's voice tab, or my PC's microphone, is just a pipe: it streams
+        audio and holds no logic. The fast path does the listening, and the brain's
+        reply only comes back out through the gate.
+      </p>
+      <pre class="mermaid">
+flowchart LR
+  Mic["App voice tab<br/>or PC mic"]
+  Host["Voice host<br/>wake word - VAD"]
+  STT["Speech<br/>to text"]
+  Brain["Sen brain"]
+  Gate{"Gate<br/>speak now?"}
+  TTS["Text to<br/>speech"]
+  Mic --> Host --> STT --> Brain --> Gate --> TTS --> Mic
+      </pre>
+
+      <h3>Typing to Sen</h3>
+      <p>
+        Typed chat never goes straight to the model. It is written into core, the brain
+        picks up what is unread, and its reply is written back. Close the app mid-reply
+        and nothing is lost.
+      </p>
+      <pre class="mermaid">
+flowchart LR
+  App["App or<br/>website chat"]
+  Core[("Core<br/>chat table")]
+  Brain["Sen brain<br/>local Qwen3-4B"]
+  Claude["Claude"]
+  App -- "say" --> Core
+  Core -- "unread" --> Brain
+  Brain -- "reply" --> Core
+  Core -- "reply" --> App
+  Brain -. "can't answer" .-> Claude
+  Claude -.-> Brain
+      </pre>
+
+      <h3>Getting work done</h3>
+      <p>
+        Bigger jobs go to Claude coding sessions that Sen starts and steers. They
+        report back into core, so the app and website show what each one is doing.
+      </p>
+      <pre class="mermaid">
+flowchart LR
+  Brain["Sen brain"]
+  Sessions["Claude sessions"]
+  Core[("Core<br/>reminders - notes<br/>work items - activity")]
+  View["App + website<br/>sessions tab"]
+  Brain -- "start / steer" --> Sessions
+  Brain -- "records" --> Core
+  Sessions -- "status" --> Core
+  Core --> View
+      </pre>
     </section>
 
     <!-- Fast / slow -->
