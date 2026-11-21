@@ -4,6 +4,9 @@ collections:
   poems:
     output: true
     permalink: /poetry/:name/
+  studies:
+    output: true
+    permalink: /bible/:name/
 
 defaults:
   - scope:
@@ -11,3 +14,8 @@ defaults:
       type: poems
     values:
       layout: poem
+  - scope:
+      path: ""
+      type: studies
+    values:
+      layout: study

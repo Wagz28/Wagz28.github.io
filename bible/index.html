@@ -1,0 +1,33 @@
+---
+layout: default
+title: Bible studies
+---
+
+<section id="bible" class="section">
+  <h2>Bible studies</h2>
+  <p>Self-led studies, working through a passage at a time.</p>
+
+  {% assign sorted_studies = site.studies | sort: "date" | reverse %}
+
+  <div class="poem-list">
+    {% for study in sorted_studies %}
+      <article class="project poem-card">
+        <div class="project-text">
+          <h3>{{ study.title }}</h3>
+
+          {% if study.date %}
+            <p class="poem-meta">{{ study.date | date: "%-d %B %Y" }}</p>
+          {% endif %}
+
+          {% if study.summary and study.summary != "" %}
+            <p>{{ study.summary }}</p>
+          {% endif %}
+
+          <p class="project-links">
+            <a href="{{ study.url }}">→ '{{ study.title }}'</a>
+          </p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
