@@ -18,24 +18,35 @@ function setActive(id){
   halo.style.transform = `translate(${x - 8}px, ${y - 8}px)`;
 }
 
-// IntersectionObserver for clean “which section am I in?”
-const io = new IntersectionObserver((entries) => {
-  const visible = entries
-    .filter(e => e.isIntersecting)
-    .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if(visible) setActive(visible.target.id);
-}, { rootMargin: "-35% 0px -55% 0px", threshold: [0.12, 0.22, 0.35] });
-
-sections.forEach(sec => io.observe(sec));
+// Scroll tracking: active = last section whose top has passed 40% of the viewport.
+// (The old IntersectionObserver used per-section ratios, so tall sections such as
+// Experience and Projects never crossed the threshold.)
+let lastId = null;
+function track(){
+  const line = window.innerHeight * 0.4;
+  let id = sections[0] && sections[0].id;
+  for (const sec of sections) {
+    if (sec.getBoundingClientRect().top <= line) id = sec.id;
+  }
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  if (atBottom && sections.length) id = sections[sections.length - 1].id;
+  if (id && id !== lastId) { lastId = id; setActive(id); }
+}
+let ticking = false;
+window.addEventListener("scroll", () => {
+  if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; track(); }); }
+}, { passive: true });
+window.addEventListener("resize", track);
 
 // click: keep it snappy and still smooth
 orbs.forEach(a => {
   a.addEventListener("click", () => {
+    lastId = a.dataset.section;
     setActive(a.dataset.section);
   });
 });
 
-if(sections[0]) setActive(sections[0].id);
+track();
 
 
 // Cursor Orb: moved to assets/js/cursor-orb.js (shared by all pages)
