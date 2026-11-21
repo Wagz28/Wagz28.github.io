@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bf9f7979c5d9437b9d382851d1a0a8a1"}'></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sen - Ben Wagstaff</title>
+  <meta name="description" content="Sen - a layered personal assistant system: one core, deletable clients, a fast control path gating a slow LLM path." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <main class="container narrow">
+
+    <p class="back-link"><a href="/">← Back to Portfolio</a></p>
+
+    <header class="project-header">
+      <h1>Sen</h1>
+      <p class="project-tagline">
+        A personal assistant built as a system: one core, many deletable clients,
+        and a fast control loop that always beats the slow one.
+      </p>
+    </header>
+
+    <!-- Overview -->
+    <section class="section">
+      <h2>Overview</h2>
+      <p>
+        Sen (short for Seneschal) is my voice and chat assistant. I can talk to it
+        from my PC, my phone or a website, and it can set reminders, take notes,
+        track work items and start AI coding sessions on my home server to do
+        longer jobs. The interesting part is not any one feature but how it is
+        built: every piece is replaceable, and nothing depends on a model behaving.
+      </p>
+    </section>
+
+    <!-- Principles -->
+    <section class="section">
+      <h2>How it is built</h2>
+      <ul>
+        <li><strong>Contracts first.</strong> Every boundary is a written schema with a conformance test. Implementations can be swapped as long as they pass.</li>
+        <li><strong>Core and clients.</strong> The core is the data plus the API over it. The site, the Android app, voice and AI sessions are all clients. Deleting any client loses no data, and the test suite checks that.</li>
+        <li><strong>Security at the contract.</strong> Each client has its own identity and scopes, data carries sensitivity tags, and every release of sensitive data is logged.</li>
+        <li><strong>Fast and slow paths.</strong> A deterministic loop owns control (stop, pause, modes). The LLM loop never speaks directly; its output passes through the fast path's gate.</li>
+        <li><strong>Thin vertical slices.</strong> Each contract is proven end to end with one small feature before anything widens.</li>
+      </ul>
+    </section>
+
+    <!-- System diagram -->
+    <section class="section">
+      <h2>The system</h2>
+      <pre class="mermaid">
+flowchart TB
+  subgraph Clients
+    Site[Website / PWA]
+    App[Android app]
+    Fast[Voice client<br/>wake word + VAD]
+    Sessions[Claude sessions]
+  end
+  Core[(Core<br/>SQLite + HTTP API<br/>scopes - audit log)]
+  Slow[Sen brain<br/>LLM + tools]
+  Speech[Speech to text / Text to speech]
+  Site --> Core
+  App --> Site
+  Fast <--> Speech
+  Fast -- messages --> Slow
+  Slow -- replies via gate --> Fast
+  Slow --> Core
+  Slow -- starts / steers --> Sessions
+  Sessions --> Core
+      </pre>
+      <p>
+        Everything runs on my own machines, joined by a private encrypted network.
+        Encryption and identity live at that bottom layer, so nothing above has to
+        reimplement them.
+      </p>
+    </section>
+
+    <!-- Fast / slow -->
+    <section class="section">
+      <h2>Fast and slow</h2>
+      <p>
+        Borrowed from <em>Thinking, Fast and Slow</em>. The fast path needs no
+        LLM and answers in milliseconds; the slow path thinks, plans and calls tools.
+        Saying "stop" always works, however busy the slow path is.
+      </p>
+      <pre class="mermaid">
+sequenceDiagram
+  participant Me
+  participant Fast as Fast path (reflex)
+  participant Slow as Slow path (LLM)
+  Me->>Fast: "Sen, remind me at six..."
+  Fast->>Slow: transcript
+  Slow->>Slow: interpret + call core
+  Slow-->>Fast: reply, sentence by sentence
+  Fast->>Fast: gate checks current mode
+  Fast->>Me: speaks
+  Me->>Fast: "stop"
+  Fast->>Fast: drops queued speech instantly
+      </pre>
+    </section>
+
+    <!-- Callosum -->
+    <section class="section">
+      <h2>Callosum</h2>
+      <p>
+        Named after the bridge between the brain's hemispheres, Callosum links
+        my machines and the AI coding sessions running on them. It keeps one shared
+        environment across computers, reports each machine's status, lints the setup
+        nightly, and runs a weekly scan that proposes, but never makes, changes.
+        Sen uses it to start, watch and hand work to sessions, so a request
+        spoken to my phone can end as a reviewed change in a repository.
+      </p>
+      <pre class="mermaid">
+flowchart LR
+  Me((Me)) --> Sen
+  Sen -- "start session" --> S1[Session A]
+  Sen --> S2[Session B]
+  S1 -- status --> Sen
+  S2 -- status --> Sen
+  S1 --> Repo[(Git + work items)]
+  S2 --> Repo
+      </pre>
+    </section>
+
+    <!-- Stack -->
+    <section class="section">
+      <h2>Stack</h2>
+      <ul>
+        <li>Python standard-library HTTP servers, SQLite, pytest</li>
+        <li>Kotlin + Jetpack Compose (native Android, no WebView)</li>
+        <li>Wyoming protocol for speech, ntfy for messaging, MCP for tools</li>
+        <li>Claude Code (headless) for the slow path and sessions</li>
+        <li>Tailscale, systemd, tmux, Syncthing</li>
+      </ul>
+    </section>
+
+    <!-- Vision -->
+    <section class="section">
+      <h2>Vision</h2>
+      <p>
+        The aim is an assistant I own end to end: my data in one core I control,
+        any interface I like on top, and AI as a client rather than the foundation.
+        Pull every model out and the system still works by hand. Put a better one in
+        and nothing else has to change. Over time I want Sen to take on more of the
+        routine running of my life and work, while control stays with the fast,
+        predictable layer and with me.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Ben Wagstaff</p>
+    </footer>
+
+  </main>
+  
+  <div class="cursor-orb"></div>
+  <script src="main.js"></script>
+  <script src="/assets/js/cursor-orb.js"></script>
+  <script src="/assets/js/src-propagation.js"></script>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, theme: "neutral" });
+  </script>
+</body>
+</html>
