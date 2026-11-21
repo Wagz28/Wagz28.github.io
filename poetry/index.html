@@ -26,9 +26,11 @@ title: Poetry
       autocomplete="off"
     />
   </div>
-  <p class="poem-search-empty hidden" id="poemSearchEmpty">No poems match.</p>
+  <p class="poem-search-empty hidden" id="poemSearchEmpty"></p>
 
   {% if unique_tags.size > 0 %}
+    <details class="poetry-tags">
+    <summary>Tags</summary>
     <div class="poetry-filters">
       <button class="poetry-filter active" data-tag="all" type="button">All<span class="tag-count">{{ sorted_poems.size }}</span></button>
       {% for tag in unique_tags %}
@@ -38,6 +40,7 @@ title: Poetry
         </button>
       {% endfor %}
     </div>
+    </details>
   {% endif %}
 
   <div class="poem-list" id="poemList">
@@ -90,6 +93,8 @@ title: Poetry
 
     function applyFilters() {
       let shown = 0;
+      let searchHits = 0;
+      const tagHits = {};
 
       cards.forEach(card => {
         const raw = card.dataset.tags || "";
@@ -100,12 +105,29 @@ title: Poetry
 
         const tagOk = selectedTag === "all" || tags.includes(selectedTag);
         const searchOk = matchUrls === null || matchUrls.has(card.dataset.url);
+        if (searchOk) {
+          searchHits++;
+          tags.forEach(t => { tagHits[t] = (tagHits[t] || 0) + 1; });
+        }
         const show = tagOk && searchOk;
         card.style.display = show ? "" : "none";
         if (show) shown++;
       });
 
-      if (emptyMsg) emptyMsg.classList.toggle("hidden", shown > 0);
+      // Tag counts follow the search, so a tag shows how many matches it would leave.
+      buttons.forEach(b => {
+        const n = b.dataset.tag === "all" ? searchHits : (tagHits[b.dataset.tag] || 0);
+        const c = b.querySelector(".tag-count");
+        if (c) c.textContent = n;
+        b.classList.toggle("hidden", n === 0 && !b.classList.contains("active"));
+      });
+
+      if (emptyMsg) {
+        const filtering = matchUrls !== null || selectedTag !== "all";
+        emptyMsg.textContent = shown === 0 ? "No poems match."
+          : shown + (shown === 1 ? " poem matches" : " poems match");
+        emptyMsg.classList.toggle("hidden", !filtering);
+      }
     }
 
     buttons.forEach(button => {
