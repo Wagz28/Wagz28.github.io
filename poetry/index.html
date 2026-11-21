@@ -30,10 +30,11 @@ title: Poetry
 
   {% if unique_tags.size > 0 %}
     <div class="poetry-filters">
-      <button class="poetry-filter active" data-tag="all" type="button">All</button>
+      <button class="poetry-filter active" data-tag="all" type="button">All<span class="tag-count">{{ sorted_poems.size }}</span></button>
       {% for tag in unique_tags %}
         <button class="poetry-filter" data-tag="{{ tag | slugify }}" type="button">
-          {{ tag }}
+          {% assign tag_count = all_tags | where_exp: "t", "t == tag" | size %}
+          {{ tag }}<span class="tag-count">{{ tag_count }}</span>
         </button>
       {% endfor %}
     </div>

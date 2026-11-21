@@ -763,6 +763,14 @@ button {
   color: #777;
 }
 
+.tag-count{
+  opacity: 0.45;
+  font-size: 0.85em;
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  border-left: 1px solid currentColor;
+}
+
 .poetry-filter:hover{
   transform: translateY(-1px);
 }
