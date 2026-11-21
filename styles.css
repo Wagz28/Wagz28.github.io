@@ -712,6 +712,31 @@ button {
 
 /* ------------------------------ */
 
+.poem-search{
+  margin: 20px 0 0;
+}
+
+.poem-search input{
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  border: 1px solid #b8b8b8;
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+  color: #222;
+}
+
+.poem-search input:focus-visible{
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+.poem-search-empty{
+  opacity: 0.75;
+  margin-top: 12px;
+}
+
 .poetry-filters{
   display: flex;
   flex-wrap: wrap;

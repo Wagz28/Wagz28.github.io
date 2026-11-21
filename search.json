@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /search.json
+---
+[{% for poem in site.poems %}{"title":{{ poem.title | jsonify }},"url":{{ poem.url | jsonify }},"summary":{{ poem.summary | jsonify }},"tags":{{ poem.tags | jsonify }},"content":{{ poem.content | strip_html | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
