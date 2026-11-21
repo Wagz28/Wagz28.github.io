@@ -59,7 +59,7 @@ flowchart TB
     Sessions[Claude sessions]
   end
   Core[(Core<br/>SQLite + HTTP API<br/>scopes - audit log)]
-  Slow[Sen brain<br/>LLM + tools]
+  Slow[Sen brain<br/>local Qwen3-4B + tools<br/>Claude fallback]
   Speech[Speech to text / Text to speech]
   Site --> Core
   App --> Site
@@ -81,7 +81,9 @@ flowchart TB
     <section class="section">
       <h2>Fast and slow</h2>
       <p>
-        Borrowed from <em>Thinking, Fast and Slow</em>. The fast path needs no
+        Borrowed from <em>Thinking, Fast and Slow</em>. Sen's brain is a small
+        model running on my own server; when it can't handle a request it hands
+        it up to Claude. The fast path needs no
         LLM and answers in milliseconds; the slow path thinks, plans and calls tools.
         Saying "stop" always works, however busy the slow path is.
       </p>
@@ -131,7 +133,8 @@ flowchart LR
         <li>Python standard-library HTTP servers, SQLite, pytest</li>
         <li>Kotlin + Jetpack Compose (native Android, no WebView)</li>
         <li>Wyoming protocol for speech, ntfy for messaging, MCP for tools</li>
-        <li>Claude Code (headless) for the slow path and sessions</li>
+        <li>Local LLM (Qwen3-4B via llama.cpp) as Sen's brain, escalating to Claude when it can't answer</li>
+        <li>Claude Code (headless) for escalation and sessions</li>
         <li>Tailscale, systemd, tmux, Syncthing</li>
       </ul>
     </section>
