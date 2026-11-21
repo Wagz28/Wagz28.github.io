@@ -712,6 +712,38 @@ button {
 
 /* ------------------------------ */
 
+.poem-search{
+  margin: 20px 0 0;
+}
+
+.poem-search input{
+  width: 100%;
+  max-width: 420px;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  font: inherit;
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.poem-search input:focus,
+.poem-search input:focus-visible{
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.poem-search-empty{
+  opacity: 0.75;
+  margin-top: 12px;
+}
+
 .poetry-filters{
   display: flex;
   flex-wrap: wrap;
@@ -729,6 +761,30 @@ button {
   font: inherit;
   transition: 0.2s ease;
   color: #777;
+}
+
+.poetry-tags{
+  margin: 20px 0 0;
+}
+
+.poetry-tags summary{
+  cursor: pointer;
+  color: #777;
+  width: fit-content;
+  list-style: none;
+}
+
+.poetry-tags summary::-webkit-details-marker{ display: none; }
+
+.poetry-tags summary::after{ content: " +"; }
+.poetry-tags[open] summary::after{ content: " \2212"; }
+
+.tag-count{
+  opacity: 0.45;
+  font-size: 0.85em;
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  border-left: 1px solid currentColor;
 }
 
 .poetry-filter:hover{

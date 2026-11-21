@@ -17,21 +17,37 @@ title: Poetry
   {% endfor %}
   {% assign unique_tags = all_tags | uniq | sort %}
 
+  <div class="poem-search">
+    <input
+      type="search"
+      id="poemSearch"
+      placeholder="Search titles and poem text"
+      aria-label="Search poems"
+      autocomplete="off"
+    />
+  </div>
+  <p class="poem-search-empty hidden" id="poemSearchEmpty"></p>
+
   {% if unique_tags.size > 0 %}
+    <details class="poetry-tags">
+    <summary>Tags</summary>
     <div class="poetry-filters">
-      <button class="poetry-filter active" data-tag="all" type="button">All</button>
+      <button class="poetry-filter active" data-tag="all" type="button">All<span class="tag-count">{{ sorted_poems.size }}</span></button>
       {% for tag in unique_tags %}
         <button class="poetry-filter" data-tag="{{ tag | slugify }}" type="button">
-          {{ tag }}
+          {% assign tag_count = all_tags | where_exp: "t", "t == tag" | size %}
+          {{ tag }}<span class="tag-count">{{ tag_count }}</span>
         </button>
       {% endfor %}
     </div>
+    </details>
   {% endif %}
 
   <div class="poem-list" id="poemList">
     {% for poem in sorted_poems %}
       <article
         class="project poem-card"
+        data-url="{{ poem.url }}"
         data-tags="{% if poem.tags %}{% for tag in poem.tags %}{{ tag | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}"
       >
         <div class="project-text">
@@ -66,25 +82,120 @@ title: Poetry
   document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".poetry-filter");
     const cards = document.querySelectorAll(".poem-card");
+    const searchInput = document.getElementById("poemSearch");
+    const emptyMsg = document.getElementById("poemSearchEmpty");
+
+    let selectedTag = "all";
+    let query = "";
+    let matchUrls = null; // null = no active query; otherwise Set of matching urls
+    let searchIndex = null;
+    let searchLoading = null;
+
+    function applyFilters() {
+      let shown = 0;
+      let searchHits = 0;
+      const tagHits = {};
+
+      cards.forEach(card => {
+        const raw = card.dataset.tags || "";
+        const tags = raw
+          .split(",")
+          .map(tag => tag.trim())
+          .filter(Boolean);
+
+        const tagOk = selectedTag === "all" || tags.includes(selectedTag);
+        const searchOk = matchUrls === null || matchUrls.has(card.dataset.url);
+        if (searchOk) {
+          searchHits++;
+          tags.forEach(t => { tagHits[t] = (tagHits[t] || 0) + 1; });
+        }
+        const show = tagOk && searchOk;
+        card.style.display = show ? "" : "none";
+        if (show) shown++;
+      });
+
+      // Tag counts follow the search, so a tag shows how many matches it would leave.
+      buttons.forEach(b => {
+        const n = b.dataset.tag === "all" ? searchHits : (tagHits[b.dataset.tag] || 0);
+        const c = b.querySelector(".tag-count");
+        if (c) c.textContent = n;
+        b.classList.toggle("hidden", n === 0 && !b.classList.contains("active"));
+      });
+
+      if (emptyMsg) {
+        const filtering = matchUrls !== null || selectedTag !== "all";
+        emptyMsg.textContent = shown === 0 ? "No poems match."
+          : shown + (shown === 1 ? " poem matches" : " poems match");
+        emptyMsg.classList.toggle("hidden", !filtering);
+      }
+    }
 
     buttons.forEach(button => {
       button.addEventListener("click", () => {
-        const selectedTag = button.dataset.tag;
+        selectedTag = button.dataset.tag;
 
         buttons.forEach(b => b.classList.remove("active"));
         button.classList.add("active");
 
-        cards.forEach(card => {
-          const raw = card.dataset.tags || "";
-          const tags = raw
-            .split(",")
-            .map(tag => tag.trim())
-            .filter(Boolean);
-
-          const show = selectedTag === "all" || tags.includes(selectedTag);
-          card.style.display = show ? "" : "none";
-        });
+        applyFilters();
       });
     });
+
+    // ---- Search: titles, summaries, tags and full poem text (/search.json) ----
+    function norm(value) {
+      return String(value || "").toLowerCase().replace(/\s+/g, " ");
+    }
+
+    function loadIndex() {
+      if (!searchLoading) {
+        searchLoading = fetch("/search.json")
+          .then(r => {
+            if (!r.ok) throw new Error("search index unavailable");
+            return r.json();
+          })
+          .then(entries => {
+            searchIndex = entries.map(e => ({
+              url: e.url,
+              haystack: norm([
+                e.title,
+                e.summary,
+                Array.isArray(e.tags) ? e.tags.join(" ") : e.tags,
+                e.content
+              ].filter(Boolean).join(" "))
+            }));
+          })
+          .catch(() => { searchIndex = null; searchLoading = null; });
+      }
+      return searchLoading;
+    }
+
+    function runSearch() {
+      query = norm(searchInput.value).trim();
+
+      if (!query) {
+        matchUrls = null;
+        applyFilters();
+        return;
+      }
+
+      loadIndex().then(() => {
+        // ignore stale results if the input changed while loading
+        if (norm(searchInput.value).trim() !== query) return;
+
+        if (!searchIndex) {
+          matchUrls = null; // index failed to load: do not hide everything
+        } else {
+          matchUrls = new Set(
+            searchIndex.filter(e => e.haystack.includes(query)).map(e => e.url)
+          );
+        }
+        applyFilters();
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener("input", runSearch);
+      searchInput.addEventListener("focus", loadIndex, { once: true });
+    }
   });
 </script>
