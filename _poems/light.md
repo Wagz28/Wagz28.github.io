@@ -1,8 +1,8 @@
 ---
 title: "Light"
 date: 2026-11-20
-summary: ""
-tags: []
+summary: "thank you in clear sight, thank you in twisting blind"
+tags: [love, depleted, depression, hope]
 ---
 
 The dark encompasses
