@@ -2,7 +2,7 @@
 title: "My route to Praise"
 date: 2026-04-29
 summary: "Each to their own route in God's will"
-tags: [christian, joy]
+tags: [joy]
 ---
 
 As the wedding bells ring

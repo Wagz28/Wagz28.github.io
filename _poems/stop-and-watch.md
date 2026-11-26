@@ -2,7 +2,7 @@
 title: "Stop and Watch"
 date: 2026-03-28
 summary: "Waist deep in the waters; stop. As the sun rises, watch"
-tags: [wonder, awe, fullness, christian]
+tags: [wonder, awe, fullness]
 ---
 
 Stop.

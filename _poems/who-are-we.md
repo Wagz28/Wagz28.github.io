@@ -2,7 +2,7 @@
 title: "Who are we?"
 date: 2026-04-12
 summary: "Not now, but then; memory of a start, not seeing the end. Walking in faith, whatever God sends."
-tags: [contemplation, trust, submission, wistful, christian]
+tags: [contemplation, trust, submission, wistful]
 ---
 
 I do not know.

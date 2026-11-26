@@ -2,7 +2,7 @@
 title: "Tested"
 date: 2026-04-14
 summary: "A true heart listens, longing to listen from above"
-tags: [tainted, love, pain, christian, submission]
+tags: [tainted, love, pain, submission]
 ---
 
 Am I being tried?

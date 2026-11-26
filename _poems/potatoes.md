@@ -2,7 +2,7 @@
 title: "Potatoes"
 date: 2025-09-12
 summary: "Tatees - all from it, wanna take a bit?"
-tags: [playful, christian, sorrow, joy, wonder]
+tags: [playful, sorrow, joy, wonder]
 ---
 
 _12/10/2025_

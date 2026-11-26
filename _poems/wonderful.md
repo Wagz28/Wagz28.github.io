@@ -2,7 +2,7 @@
 title: "Wonderful"
 date: 2026-03-04
 summary: "My cup overflows"
-tags: [reverence, wonder, joy, christian]
+tags: [reverence, wonder, joy]
 ---
 
 Too much I cry

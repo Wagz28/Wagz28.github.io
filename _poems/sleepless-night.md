@@ -2,7 +2,7 @@
 title: "Sleepness Night & Phantom Goodbyes"
 date: 2025-10-05
 summary: "Keep the distance."
-tags: [consolation, love, trust, christian]
+tags: [consolation, love, trust]
 ---
 
 _Praise, Praise, Praise_

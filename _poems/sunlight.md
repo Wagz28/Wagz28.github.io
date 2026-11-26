@@ -2,7 +2,7 @@
 title: "Sunlight"
 date: 2025-06-14
 summary: "Summer!!!"
-tags: [wonder, joy, peace, love, christian]
+tags: [wonder, joy, peace, love]
 ---
 
 Sunlight, trees, warmth & peace shine down

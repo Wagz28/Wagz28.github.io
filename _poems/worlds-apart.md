@@ -2,7 +2,7 @@
 title: "Worlds apart"
 date: 2026-04-30
 summary: "Do we mean it when we pray to be 'set apart'?"
-tags: [christian, submission, pain, depleted, love]
+tags: [submission, pain, depleted, love]
 ---
 
 What does it feel like to be Samson

@@ -2,7 +2,7 @@
 title: "Gravestone"
 date: 2025-05-05
 summary: "What do we leave behind?"
-tags: [reflection, sorrow, christian]
+tags: [reflection, sorrow]
 ---
 
 _In our minds a constant thought_

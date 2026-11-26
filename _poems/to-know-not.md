@@ -2,7 +2,7 @@
 title: "To know not"
 date: 2026-04-04
 summary: "Your heritage, an abomination"
-tags: [christian, lament]
+tags: [lament]
 ---
 
 The nations your heritage

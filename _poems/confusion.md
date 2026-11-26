@@ -2,7 +2,7 @@
 title: "Confusion without solution"
 date: 2026-03-02
 summary: "What do we really know?"
-tags: [reflection, playful, frustration, chaos, christian]
+tags: [reflection, playful, frustration, chaos]
 ---
 
 Chopped like a tree, used for timber

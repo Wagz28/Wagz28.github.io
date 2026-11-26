@@ -2,7 +2,7 @@
 title: "What is not"
 date: 2026-03-21
 summary: "There's a poem I haven't yet made..."
-tags: [reflection, tinted, death, christian]
+tags: [reflection, tinted, death]
 ---
 
 There's a poem I haven't yet made

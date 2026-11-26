@@ -2,7 +2,7 @@
 title: "Stand"
 date: 2026-04-17
 summary: "Silent and still under foot of faith, yet raging all around."
-tags: [trust, christian]
+tags: [trust]
 ---
 
 We must learn to stand within the wind and the waves

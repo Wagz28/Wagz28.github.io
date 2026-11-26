@@ -2,7 +2,7 @@
 title: "When they stop texting"
 date: 2026-04-15
 summary: "I forget. Help me remember O Lord."
-tags: [consolation, contemplation, stillness, peace, awe, christian]
+tags: [consolation, contemplation, stillness, peace, awe]
 ---
 
 When they stop texting

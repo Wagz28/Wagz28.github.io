@@ -2,7 +2,7 @@
 title: "Bathing in Candlelight"
 date: 2026-02-06
 summary: "Quite literally, indeed simply..."
-tags: [reflection, reverence, wonder, christian]
+tags: [reflection, reverence, wonder]
 ---
 
 Frosted morn and a winter born

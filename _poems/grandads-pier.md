@@ -2,7 +2,7 @@
 title: "Grandad's pier"
 date: 2026-02-27
 summary: "Reflections on a Grandad's London pier..."
-tags: [reflection, sorrow, hope, gratitude, christian]
+tags: [reflection, sorrow, hope, gratitude]
 ---
 
 I want to describe it.

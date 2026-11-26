@@ -2,7 +2,7 @@
 title: "Phantom"
 date: 2026-04-04
 summary: "The dripping claws of a tyger, make naught by a Lamb."
-tags: [christian, lament, awe]
+tags: [lament, awe]
 ---
 
 Such terror, such pain

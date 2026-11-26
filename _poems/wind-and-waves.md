@@ -2,7 +2,7 @@
 title: "Wind and Waves"
 date: 2026-04-19
 summary: "Like a soft breeze upon my heart is His Love"
-tags: [christian, glorify, love, submission]
+tags: [glorify, love, submission]
 ---
 
 *Winds come, waves crash*

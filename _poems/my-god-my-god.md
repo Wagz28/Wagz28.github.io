@@ -2,7 +2,7 @@
 title: "My God, My God"
 date: 2026-03-17
 summary: "When you pass through the waters, I will be with you; and through the rivers, they shall not overwhelm; when you walk through fire you shall not be burned, and the flame shall not consume you."
-tags: [sorrow, disappointment, christian, observing]
+tags: [sorrow, disappointment, observing]
 ---
 
 When the Light fades from day

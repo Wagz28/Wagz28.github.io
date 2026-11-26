@@ -2,7 +2,7 @@
 title: "Spring Garden"
 date: 2025-02-05
 summary: "Spring from an alpine garden"
-tags: [wonder, joy, peace, love, christian]
+tags: [wonder, joy, peace, love]
 ---
 
 Winter's sun in the alpine garden

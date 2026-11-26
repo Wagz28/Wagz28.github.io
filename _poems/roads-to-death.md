@@ -2,7 +2,7 @@
 title: "Roads to Death"
 date: 2026-05-26
 summary: "The paradox of weight, admittance of the fall, sets the sky ever close"
-tags: [tainted, submission, christian]
+tags: [tainted, submission]
 ---
 
 A leaking heart, a drowning mind

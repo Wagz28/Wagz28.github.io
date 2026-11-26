@@ -2,7 +2,7 @@
 title: "Trace the roots"
 date: 2026-05-23
 summary: "Where eft they go I no longer know"
-tags: [wonder, gratitude, christian]
+tags: [wonder, gratitude]
 ---
 
 Trace the roots

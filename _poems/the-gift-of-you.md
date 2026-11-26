@@ -2,7 +2,7 @@
 title: "The Gift of You"
 date: 2026-05-11
 summary: "As if nothing"
-tags: [christian, love, submission]
+tags: [love, submission]
 ---
 
 Engulf me in Your fire

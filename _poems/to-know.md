@@ -2,7 +2,7 @@
 title: "To know"
 date: 2026-04-03
 summary: "So much assumption, thinking we know what we know not."
-tags: [christian, reflection, contrast, sorrow]
+tags: [reflection, contrast, sorrow]
 ---
 
 For the darkness is as Light... to You.

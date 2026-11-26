@@ -2,7 +2,7 @@
 title: "The villain"
 date: 2026-05-19
 summary: "How to write against what is not? At least i may try"
-tags: [christian, riddle-like, overcome]
+tags: [riddle-like, overcome]
 ---
 
 The waters flow, for how else could they go?

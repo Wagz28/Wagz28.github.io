@@ -2,7 +2,7 @@
 title: "Man of sorrow"
 date: 2026-03-19
 summary: "One that knows the universe... what does He see?"
-tags: [sorrow, tinted, christian]
+tags: [sorrow, tinted]
 ---
 
 A Man of sorrows...

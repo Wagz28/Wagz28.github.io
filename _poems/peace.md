@@ -2,7 +2,7 @@
 title: "Peace"
 date: 2025-12-25
 summary: "God made man ..."
-tags: [reflection, wonder, awe, reverence, christian]
+tags: [reflection, wonder, awe, reverence]
 ---
 
 _25/12/25_

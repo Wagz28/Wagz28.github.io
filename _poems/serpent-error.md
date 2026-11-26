@@ -2,7 +2,7 @@
 title: "Serpent error"
 date: 2026-11-23
 summary: "Little one, that is oil not water!"
-tags: [wonder, joy, christian, riddle-like, free]
+tags: [wonder, joy, riddle-like, free]
 ---
 
 &emsp;&emsp;Joy, sing joy
